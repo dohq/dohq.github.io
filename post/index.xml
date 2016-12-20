@@ -7,19 +7,22 @@
     <language>en-us</language>
     
     
-    <updated>Mon, 19 Dec 2016 18:38:34 JST</updated>
+    <updated>Mon, 19 Oct 2015 18:38:34 JST</updated>
     
     <item>
-      <title>init</title>
+      <title>dummy</title>
       <link>https://dohq.github.io/post/init/</link>
-      <pubDate>Mon, 19 Dec 2016 18:38:34 JST</pubDate>
+      <pubDate>Mon, 19 Oct 2015 18:38:34 JST</pubDate>
       
       <guid>https://dohq.github.io/post/init/</guid>
       <description>
 
-&lt;h1 id=&#34;もちろん&#34;&gt;もちろん&lt;/h1&gt;
+&lt;h4 id=&#34;もちろん&#34;&gt;もちろん&lt;/h4&gt;
 
-&lt;p&gt;テスト&lt;/p&gt;
+&lt;p&gt;テスト
+改行テスト&lt;/p&gt;
+
+&lt;p&gt;改行テスト&lt;/p&gt;
 </description>
     </item>
     
