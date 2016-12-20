@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+      <title>Pages on やるだけやる </title>
+      <generator uri="https://gohugo.io">Hugo</generator>
+    <link>https://dohq.github.io/pages/index.xml</link>
+    <language>en-us</language>
+    
+    
+    <updated>Mon, 19 Dec 2016 18:23:58 JST</updated>
+    
+    <item>
+      <title>cv</title>
+      <link>https://dohq.github.io/pages/cv/</link>
+      <pubDate>Mon, 19 Dec 2016 18:23:58 JST</pubDate>
+      
+      <guid>https://dohq.github.io/pages/cv/</guid>
+      <description>
+
+&lt;h4 id=&#34;name&#34;&gt;Name&lt;/h4&gt;
+
+&lt;p&gt;前島竜太郎&lt;/p&gt;
+
+&lt;h4 id=&#34;age&#34;&gt;Age&lt;/h4&gt;
+
+&lt;p&gt;26&lt;/p&gt;
+
+&lt;h4 id=&#34;gender&#34;&gt;Gender&lt;/h4&gt;
+
+&lt;p&gt;男性&lt;/p&gt;
+
+&lt;h4 id=&#34;job&#34;&gt;Job&lt;/h4&gt;
+
+&lt;p&gt;駆け出しインフラエンジニア、やってます&lt;/p&gt;
+
+&lt;h4 id=&#34;skill&#34;&gt;Skill&lt;/h4&gt;
+
+&lt;ul&gt;
+&lt;li&gt;Linuxを用いたシステム構築が得意です
+
+&lt;ul&gt;
+&lt;li&gt;RHEL&lt;/li&gt;
+&lt;li&gt;CentOS&lt;/li&gt;
+&lt;li&gt;SUSE Linux&lt;/li&gt;
+&lt;li&gt;AIX&lt;/li&gt;
+&lt;li&gt;Solaris&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;スクリプト言語を用いて運用ツールの作成を行えます
+
+&lt;ul&gt;
+&lt;li&gt;bash&lt;/li&gt;
+&lt;li&gt;ksh&lt;/li&gt;
+&lt;li&gt;perl&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;Gitなどモダンなツールも使用出来ます
+
+&lt;ul&gt;
+&lt;li&gt;Git&lt;/li&gt;
+&lt;li&gt;SVN&lt;/li&gt;
+&lt;li&gt;docker&lt;/li&gt;
+&lt;li&gt;vagrant&lt;/li&gt;
+&lt;li&gt;chef&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;li&gt;ほかに出来る事
+
+&lt;ul&gt;
+&lt;li&gt;AWSでインスタンス立てるくらいは出来ます(lamdaはまだ業務で使用した事はありません)&lt;/li&gt;
+&lt;li&gt;在職中の会社ホームページを管理してます&lt;/li&gt;
+&lt;li&gt;VimVimしてます&lt;/li&gt;
+&lt;/ul&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>
