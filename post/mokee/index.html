@@ -1,10 +1,10 @@
-    <!DOCTYPE html>
+  <!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title> Posts &middot; やるだけやる </title>
+    <title> ArchLinuxでMokeeをビルドする &middot; やるだけやる </title>
     
     <link rel="stylesheet" type="text/css" href="https://dohq.github.io/css/uno.min.css" />
     <link rel="stylesheet" type="text/css" href="https://dohq.github.io/css/lightGallery.css" />
@@ -12,7 +12,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dohq.github.io/apple-touch-icon-144-precomposed.png">
     <link rel="shortcut icon" href="https://dohq.github.io/favicon.ico">
     
-    <link href="https://dohq.github.io/post/index.xml" rel="alternate" type="application/rss+xml" title="やるだけやる" />
+    <link href="" rel="alternate" type="application/rss+xml" title="やるだけやる" />
     
     <script src="https://dohq.github.io/js/jquery.min.js"></script>
     <script src="https://dohq.github.io/js/main.min.js">
@@ -33,17 +33,15 @@
 
 </head>
 
-    <body>
-        <div id="scriptHeader">
+  <body>
+    <div id="scriptHeader">
     <span class="mobile btn-mobile-menu">
             <i class="fa fa-bars btn-mobile-menu__icon"></i>
             <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
     </span>
     <header class="
         
-        
             panel-cover panel-cover--collapsed
-        
         "  style="background-image: url(/images/background-cover.jpg)" >
     <div class="panel-main">
         <div class="panel-main__inner panel-inverted">
@@ -142,31 +140,75 @@
     </header>
 </noscript>
 
-        <div class="content-wrapper">
-            <div class="content-wrapper__inner">
-                
-                <h2>2017</h2>
-                <ul id="list">
-                    
-                    <li>
-                        <a href="https://dohq.github.io/post/mokee/">ArchLinuxでMokeeをビルドする </a>
-                        <div class="meta">Wed, Jan 11, 2017</div>
-                    </li>
-                    
-                </ul>
-                
-                <h2>2015</h2>
-                <ul id="list">
-                    
-                    <li>
-                        <a href="https://dohq.github.io/post/init/">dummy </a>
-                        <div class="meta">Mon, Oct 19, 2015</div>
-                    </li>
-                    
-                </ul>
-                
-            </div>
+    <div class="content-wrapper">
+      <div class="content-wrapper__inner">
+        <div class="post">
+          <h1>ArchLinuxでMokeeをビルドする</h1>
+          <span class="post-date">Wed, Jan 11, 2017</span>
+          
+
+<h2 id="自分メモ-mokee-mm-のビルド">自分メモ Mokee(MM)のビルド</h2>
+
+<p>Xiaomi Mi5(gemini)のMokeeをビルドしたのでそのメモ
+開発ツール系はインストールしてあるよね？</p>
+
+<h3 id="環境">環境</h3>
+
+<p>OS: Arch Linux
+Kernel: x86_64 Linux 4.8.13-1-ARCH
+Uptime: 4d 23h 59m
+Packages: 836
+Shell: zsh 5.3.1
+CPU: Intel Core i5-2520M CPU @ 3.2GHz
+RAM: 7292MiB / 15934MiB</p>
+
+<h3 id="以下雑なコマンド">以下雑なコマンド</h3>
+
+<pre><code>yaourt -S repo imagemagick
+mkdir ~/Mokee &amp;&amp; cd $_
+virtualenv2 venv
+repo init -u https://github.com/MoKee/android.git -b mkm
+repo sync -j16
+. build/envsetup.sh
+. venv/bin/activate
+breakfast gemini
+mka bacon
+</code></pre>
+
+<h3 id="その他メモ">その他メモ</h3>
+
+<p>selinux permissiveのkernelを作る</p>
+
+<pre><code class="language-device/xiaomi/gemini/BoardConfig.mk"> # Kernel
+ BOARD_KERNEL_BASE := 0x80000000
+-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff
++BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff androidboot.selinux=permissive
+ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+ BOARD_KERNEL_PAGESIZE := 4096
+ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+</code></pre>
+
         </div>
-    </body>
-    
+        <div class="sharing">
+<a href="https://twitter.com/intent/tweet?status=ArchLinux%e3%81%a7Mokee%e3%82%92%e3%83%93%e3%83%ab%e3%83%89%e3%81%99%e3%82%8b-https%3a%2f%2fdohq.github.io%2fpost%2fmokee%2f" target="_blank" title="Follow me on Twitter" class="twitter">
+<span class="fa fa-twitter-square fa-3x"></span></a>
+<a href="https://www.facebook.com/sharer/sharer.php?u=https%3a%2f%2fdohq.github.io%2fpost%2fmokee%2f" target="_blank" title="Join me on Facebook" class="facebook">
+<span class="fa fa-facebook-square fa-3x"></span></a>
+<a href="https://plus.google.com/share?url=https%3a%2f%2fdohq.github.io%2fpost%2fmokee%2f" target="_blank" title="Google+" class="googleplus">
+<span class="fa fa-google-plus-square fa-3x"></span></a>
+<a href="http://www.linkedin.com/shareArticle?mini=true&url=https%3a%2f%2fdohq.github.io%2fpost%2fmokee%2f&title=ArchLinux%e3%81%a7Mokee%e3%82%92%e3%83%93%e3%83%ab%e3%83%89%e3%81%99%e3%82%8b" target="_blank" title="LinkedIn" class="linkedin">
+<span class="fa fa-linkedin-square fa-3x"></span></a>
+<a href="http://www.reddit.com/submit?url=https%3a%2f%2fdohq.github.io%2fpost%2fmokee%2f" target="_blank" title="Reddit" class="reddit"><span class="fa fa-reddit-square fa-3x"></span></a>
+<a href="http://www.stumbleupon.com/submit?url=https%3a%2f%2fdohq.github.io%2fpost%2fmokee%2f" target="_blank" title="StumbleUpon" class="stumbleupon"><span class="fa fa-stumbleupon fa-3x">
+</span></a>
+</div>
+        
+
+
+
+      </div>
+    </div>
+
+  </body>
+  
 </html>

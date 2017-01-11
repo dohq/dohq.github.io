@@ -7,7 +7,58 @@
     <language>en-us</language>
     
     
-    <updated>Mon, 19 Oct 2015 18:38:34 JST</updated>
+    <updated>Wed, 11 Jan 2017 02:09:46 UTC</updated>
+    
+    <item>
+      <title>ArchLinuxでMokeeをビルドする</title>
+      <link>https://dohq.github.io/post/mokee/</link>
+      <pubDate>Wed, 11 Jan 2017 02:09:46 UTC</pubDate>
+      
+      <guid>https://dohq.github.io/post/mokee/</guid>
+      <description>
+
+&lt;h2 id=&#34;自分メモ-mokee-mm-のビルド&#34;&gt;自分メモ Mokee(MM)のビルド&lt;/h2&gt;
+
+&lt;p&gt;Xiaomi Mi5(gemini)のMokeeをビルドしたのでそのメモ
+開発ツール系はインストールしてあるよね？&lt;/p&gt;
+
+&lt;h3 id=&#34;環境&#34;&gt;環境&lt;/h3&gt;
+
+&lt;p&gt;OS: Arch Linux
+Kernel: x86_64 Linux 4.8.13-1-ARCH
+Uptime: 4d 23h 59m
+Packages: 836
+Shell: zsh 5.3.1
+CPU: Intel Core i5-2520M CPU @ 3.2GHz
+RAM: 7292MiB / 15934MiB&lt;/p&gt;
+
+&lt;h3 id=&#34;以下雑なコマンド&#34;&gt;以下雑なコマンド&lt;/h3&gt;
+
+&lt;pre&gt;&lt;code&gt;yaourt -S repo imagemagick
+mkdir ~/Mokee &amp;amp;&amp;amp; cd $_
+virtualenv2 venv
+repo init -u https://github.com/MoKee/android.git -b mkm
+repo sync -j16
+. build/envsetup.sh
+. venv/bin/activate
+breakfast gemini
+mka bacon
+&lt;/code&gt;&lt;/pre&gt;
+
+&lt;h3 id=&#34;その他メモ&#34;&gt;その他メモ&lt;/h3&gt;
+
+&lt;p&gt;selinux permissiveのkernelを作る&lt;/p&gt;
+
+&lt;pre&gt;&lt;code class=&#34;language-device/xiaomi/gemini/BoardConfig.mk&#34;&gt; # Kernel
+ BOARD_KERNEL_BASE := 0x80000000
+-BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff
++BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff androidboot.selinux=permissive
+ BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+ BOARD_KERNEL_PAGESIZE := 4096
+ BOARD_KERNEL_TAGS_OFFSET := 0x00000100
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>dummy</title>
