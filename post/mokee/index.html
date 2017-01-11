@@ -149,18 +149,20 @@
 
 <h2 id="自分メモ-mokee-mm-のビルド">自分メモ Mokee(MM)のビルド</h2>
 
-<p>Xiaomi Mi5(gemini)のMokeeをビルドしたのでそのメモ
-開発ツール系はインストールしてあるよね？</p>
+<p>Xiaomi Mi5(gemini)のMokeeをビルドしたのでそのメモ</p>
+
+<p>開発ツール系はインストールしてあるよね？</p>
 
 <h3 id="環境">環境</h3>
 
-<p>OS: Arch Linux
+<pre><code>OS: Arch Linux
 Kernel: x86_64 Linux 4.8.13-1-ARCH
 Uptime: 4d 23h 59m
 Packages: 836
 Shell: zsh 5.3.1
 CPU: Intel Core i5-2520M CPU @ 3.2GHz
-RAM: 7292MiB / 15934MiB</p>
+RAM: 7292MiB / 15934MiB
+</code></pre>
 
 <h3 id="以下雑なコマンド">以下雑なコマンド</h3>
 
@@ -179,7 +181,9 @@ mka bacon
 
 <p>selinux permissiveのkernelを作る</p>
 
-<pre><code class="language-device/xiaomi/gemini/BoardConfig.mk"> # Kernel
+<p>device/xiaomi/gemini/BoardConfig.mk</p>
+
+<pre><code> # Kernel
  BOARD_KERNEL_BASE := 0x80000000
 -BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff
 +BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff androidboot.selinux=permissive

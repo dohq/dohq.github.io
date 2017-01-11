@@ -1,11 +1,10 @@
-    <!DOCTYPE html>
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
 <head>
-	<meta name="generator" content="Hugo 0.18.1" />
     <meta http-equiv="content-type" content="text/html; charset=utf-8">
     
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
-    <title> やるだけやる &middot; やるだけやる </title>
+    <title> Tags &middot; やるだけやる </title>
     
     <link rel="stylesheet" type="text/css" href="https://dohq.github.io/css/uno.min.css" />
     <link rel="stylesheet" type="text/css" href="https://dohq.github.io/css/lightGallery.css" />
@@ -13,7 +12,7 @@
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://dohq.github.io/apple-touch-icon-144-precomposed.png">
     <link rel="shortcut icon" href="https://dohq.github.io/favicon.ico">
     
-    <link href="https://dohq.github.io/index.xml" rel="alternate" type="application/rss+xml" title="やるだけやる" />
+    <link href="https://dohq.github.io/tags/index.xml" rel="alternate" type="application/rss+xml" title="やるだけやる" />
     
     <script src="https://dohq.github.io/js/jquery.min.js"></script>
     <script src="https://dohq.github.io/js/main.min.js">
@@ -34,8 +33,8 @@
 
 </head>
 
-    <body>
-        <div id="scriptHeader">
+<body>
+    <div id="scriptHeader">
     <span class="mobile btn-mobile-menu">
             <i class="fa fa-bars btn-mobile-menu__icon"></i>
             <i class="fa fa-times btn-mobile-close__icon hidden"> </i>
@@ -43,7 +42,7 @@
     <header class="
         
         
-                panel-cover
+            panel-cover panel-cover--collapsed
         
         "  style="background-image: url(/images/background-cover.jpg)" >
     <div class="panel-main">
@@ -143,62 +142,44 @@
     </header>
 </noscript>
 
-        <div class="content-wrapper">
-            <div class="content-wrapper__inner">
-                <section id="main">
-                    <div>
-                        
-                            
-                                <article class="post">
-<header>
-<h2><a href="https://dohq.github.io/post/mokee/">ArchLinuxでMokeeをビルドする </a> </h2>
-<div class="post-meta">Wed, Jan 11, 2017 - Read in 1 Min </div>
-</header>
-<div class="summary">
-    自分メモ Mokee(MM)のビルド Xiaomi Mi5(gemini)のMokeeをビルドしたのでそのメモ
-開発ツール系はインストールしてあるよね？
-環境 OS: Arch Linux Kernel: x86_64 Linux 4.8.13-1-ARCH Uptime: 4d 23h 59m Packages: 836 Shell: zsh 5.3.1 CPU: Intel Core i5-2520M CPU @ 3.2GHz RAM: 7292MiB / 15934MiB  以下雑なコマンド yaourt -S repo imagemagick mkdir ~/Mokee &amp;&amp; cd $_ virtualenv2 venv repo init -u https://github.com/MoKee/android.git -b mkm repo sync -j16 . build/envsetup.sh . venv/bin/activate breakfast gemini mka bacon  その他メモ selinux permissiveのkernelを作る
-device/xiaomi/gemini/BoardConfig.mk
- # Kernel BOARD_KERNEL_BASE := 0x80000000 -BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.
-</div>
-<footer>
-<a href='https://dohq.github.io/post/mokee/'><nobr>Read more →</nobr></a>
-</footer>
-</article>
-
-
-                            
-                        
-                            
-                        
-                            
-                                <article class="post">
-<header>
-<h2><a href="https://dohq.github.io/post/init/">dummy </a> </h2>
-<div class="post-meta">Mon, Oct 19, 2015 - Read in 1 Min </div>
-</header>
-<div class="summary">
-    もちろん テスト 改行テスト
-改行テスト
-</div>
-<footer>
-<a href='https://dohq.github.io/post/init/'><nobr>Read more →</nobr></a>
-</footer>
-</article>
-
-
-                            
-                        
-                    </div>
-                    </br>
-                    <h4>
-                        <a href="https://dohq.github.io/post/">Archive</a>
-                    </h4>
-                </section>
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner">
+            <section id="main">
+              <div>
+                <h1 id="title">Tags</h1>
+                <style type="text/css">
+                        #double ul{
+                          width:760px;
+                          margin-bottom:20px;
+                          overflow:hidden;
+                        }
+                        #double li{
+                          line-height:1.5em;
+                          float:left;
+                          display:inline;
+                          width:50%;
+                        }
+                </style>
+                <ul id="double">
+                
+                
+                    <li>
+                        <a href="android">android</a> 1
+                    </li>
+                
+                    <li>
+                        <a href="development">development</a> 1
+                    </li>
+                
+                    <li>
+                        <a href="mokee">mokee</a> 1
+                    </li>
+                
+               </ul>
+              </div>
+            </section>
             </div>
         </div>
-        <footer class="footer"></footer>
-
-        
     </body>
+    
 </html>
