@@ -17,13 +17,13 @@
   </url>
   
   <url>
-    <loc>https://dohq.github.io/categories/android/</loc>
+    <loc>https://dohq.github.io/tags/android/</loc>
     <lastmod>2017-01-11T02:09:46+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/android/</loc>
+    <loc>https://dohq.github.io/categories/android/</loc>
     <lastmod>2017-01-11T02:09:46+00:00</lastmod>
     <priority>0</priority>
   </url>
@@ -34,25 +34,25 @@
   </url>
   
   <url>
-    <loc>https://dohq.github.io/categories/development/</loc>
-    <lastmod>2017-01-11T02:09:46+00:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://dohq.github.io/tags/development/</loc>
     <lastmod>2017-01-11T02:09:46+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/categories/mokee/</loc>
+    <loc>https://dohq.github.io/categories/development/</loc>
     <lastmod>2017-01-11T02:09:46+00:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dohq.github.io/tags/mokee/</loc>
+    <lastmod>2017-01-11T02:09:46+00:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohq.github.io/categories/mokee/</loc>
     <lastmod>2017-01-11T02:09:46+00:00</lastmod>
     <priority>0</priority>
   </url>
