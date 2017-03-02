@@ -1,18 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-      <title>やるだけやる on やるだけやる </title>
-      <generator uri="https://gohugo.io">Hugo</generator>
+    <title>やるだけやる</title>
     <link>https://dohq.github.io/index.xml</link>
-    <language>en-us</language>
-    
-    
-    <updated>Wed, 11 Jan 2017 02:09:46 UTC</updated>
+    <description>Recent content on やるだけやる</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>&amp;copy; 2016 R.Maejima</copyright>
+    <lastBuildDate>Wed, 11 Jan 2017 02:09:46 +0000</lastBuildDate>
+    <atom:link href="https://dohq.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     <item>
       <title>ArchLinuxでMokeeをビルドする</title>
       <link>https://dohq.github.io/post/mokee/</link>
-      <pubDate>Wed, 11 Jan 2017 02:09:46 UTC</pubDate>
+      <pubDate>Wed, 11 Jan 2017 02:09:46 +0000</pubDate>
       
       <guid>https://dohq.github.io/post/mokee/</guid>
       <description>
@@ -66,10 +67,10 @@ mka bacon
     
     <item>
       <title>cv</title>
-      <link>https://dohq.github.io/pages/cv/</link>
-      <pubDate>Mon, 19 Dec 2016 18:23:58 JST</pubDate>
+      <link>https://dohq.github.io/about/</link>
+      <pubDate>Mon, 19 Dec 2016 18:23:58 +0900</pubDate>
       
-      <guid>https://dohq.github.io/pages/cv/</guid>
+      <guid>https://dohq.github.io/about/</guid>
       <description>
 
 &lt;h4 id=&#34;name&#34;&gt;Name&lt;/h4&gt;
@@ -124,23 +125,6 @@ mka bacon
 &lt;li&gt;VimVimしてます&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;/ul&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>dummy</title>
-      <link>https://dohq.github.io/post/init/</link>
-      <pubDate>Mon, 19 Oct 2015 18:38:34 JST</pubDate>
-      
-      <guid>https://dohq.github.io/post/init/</guid>
-      <description>
-
-&lt;h4 id=&#34;もちろん&#34;&gt;もちろん&lt;/h4&gt;
-
-&lt;p&gt;テスト
-改行テスト&lt;/p&gt;
-
-&lt;p&gt;改行テスト&lt;/p&gt;
 </description>
     </item>
     
