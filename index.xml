@@ -102,12 +102,16 @@ mka bacon
 &lt;li&gt;AIX&lt;/li&gt;
 &lt;li&gt;Solaris&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;スクリプト言語を用いて運用ツールの作成を行えます
+&lt;li&gt;運用バッチを書いてます
 
 &lt;ul&gt;
 &lt;li&gt;bash&lt;/li&gt;
 &lt;li&gt;ksh&lt;/li&gt;
 &lt;li&gt;perl&lt;/li&gt;
+&lt;li&gt;python&lt;/li&gt;
+&lt;li&gt;go&lt;/li&gt;
+&lt;li&gt;java&lt;/li&gt;
+&lt;li&gt;c&lt;/li&gt;
 &lt;/ul&gt;&lt;/li&gt;
 &lt;li&gt;Gitなどモダンなツールも使用出来ます
 
