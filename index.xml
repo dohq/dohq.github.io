@@ -2,13 +2,75 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>やるだけやる</title>
-    <link>https://dohq.github.io/index.xml</link>
+    <link>https://dohq.github.io/</link>
     <description>Recent content on やるだけやる</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <copyright>&amp;copy; 2016 R.Maejima</copyright>
-    <lastBuildDate>Wed, 11 Jan 2017 02:09:46 +0000</lastBuildDate>
-    <atom:link href="https://dohq.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>2017 R.Maejima</copyright>
+    <lastBuildDate>Sun, 12 Nov 2017 18:23:58 +0900</lastBuildDate>
+    
+	<atom:link href="https://dohq.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>cv</title>
+      <link>https://dohq.github.io/about/</link>
+      <pubDate>Sun, 12 Nov 2017 18:23:58 +0900</pubDate>
+      
+      <guid>https://dohq.github.io/about/</guid>
+      <description> Name 前島竜太郎
+Age 26
+Gender 男性
+Job 駆け出しエンジニア、やってます
+Skill  Linuxを用いたシステム構築が得意です  RHEL CentOS SUSE Linux AIX Solaris  運用バッチを書いてます  bash ksh perl python (最近のMyFavorite) java c  Gitとか一通り触れます  Git SVN docker vagrant chef  ほかに出来る事  AWSで小規模ネットワークくらいなら立てれます 在職中の会社ホームページを管理してます VimVimしてます   </description>
+    </item>
+    
+    <item>
+      <title>Vimconf2017</title>
+      <link>https://dohq.github.io/post/vimconf2017/</link>
+      <pubDate>Wed, 08 Nov 2017 11:50:07 +0900</pubDate>
+      
+      <guid>https://dohq.github.io/post/vimconf2017/</guid>
+      <description>何勘違いしてるんだ?まだ俺のvimconf2017は終了してないぜ 周回遅れにも程がありますが2017年11月4日に開催されたvimconf2017に参加しましたので、
+その感想をば
+AM Vim, Me and Community (haya14busa) incsearch.vim/vim-easymotionなどのauthorです。
+私自身vim-easymotionは外せないプラギンなので足を向けて寝れませんね。
+発表については、haya14busaさんとvimの歴史についてでした。
+vimを使い始めた理由が「なんとなくかっこよかったから」は激しく同意。
+自分は15年くらい前からLinuxの虜になっていたので、そこでデフォエディタだったのが触り始めの切っ掛けでしたね
+easymotionは、元々Lokaltogさんという方が作ってたプラギンらしく、
+それをforkして弄っていたところ「コラボレータにならないか？」とのお誘いがあったらしい。
+ここらへんはOSSの強みが出てるなぁと思いました。
+また、haya14busaさんがauthorになってからスター成長曲線をキレイに描いていたのも印象に残りました。
+最後の方に発表されていたvimのコミュニティについても、
+確かに特定の言語向けアプリケーションと違ってエディタというツールなので、いろんな使用者がいるだろうなぁとなるほどしました。 incsearchの機能がvim本体へと取り込まれたのはスゴいですね！おめでとうございます。
+The Past and Future of Vim-go (fatih) vim-goというgo言語をvimで開発するのにベリー便利なプラギンのauthorです。
+そのほかにもgoのコミッターでもあるようで、さらにはDigitalOceanの中の人でもあるとか。
+最近はvultrですが、昔はDigitalOcean使ってました！！！
+ちなみに「ファティー」さんと読むようです(ずっとフェイスだと思ってたのは内緒)
+僕自身はプロダクトでgoを使った事が無いので、vim-goをゴリゴリ使う事が無いのですが、
+「goの勉強したい！」って長年言い続けてvim-goだけ入ってます…
+そんな中で共感したのが「ドキュメント書くのつらい…」って事
+設計書とか詳細設計書とか手順書とかめんどいですね(白目)
+とにかく、go書きたいっていうかvim-go使う為にgo書きたい！！ ってなりました。
+お昼 お弁当めっちゃ豪華やん？ってなって、このチケット代は安すぎるやろ…って心配になりつつ
+すきやき弁当とコーヒーと白い恋人に舌鼓を打ちました。
+Talk show (Vim 鼎談) kaoriyaさんÎÝattnさんÎÝ-takataさんの3名によるトークショーでした。
+自分がvimに始めて触れたのがバージョン6とかその辺で「もう10年近く前になるのか…」と聞きながら黄昏れてたら
+「比較的新しいですねー by kaoriya」
+とのこと…ま、まぁ？私自身が若いし？(震え声)
+まぁ本格的に使い始めたのは7.3くらいからです。
+壇上の3名はwindowsメインということでした。
+私も仕事ではwindows端末しか与えられないのでterminalは待ちに待った機能でしたね。
+mattnさんもおっしゃってしたが、2016年のvimアドベントカレンダーに書いて頂いた時、
+自分もすぐさまパッチ当てて使ってました。これ無しではもう生きれない体になってます。
+それと、ここで始めて生mattnさんを見ました。twitterでエゴサしてたけど「mattnさん服着てる…？」みたいなの多すぎでした。
+Gogo Creating your lovely color scheme (kokopon) Icebergというcolorschemeのauthor
+自分はここ1年くらいbase16-ashesを使ってるのですが、同じように暗めなcolorschemeなので興味深く拝見させて頂きました。
+「まずコンセプトを決める事。なにか迷ったらコンセプトを元にする」
+至言ですね！
+vim-mode-plus: The most ambitious vim emulator in the world (t9md) VisualStudioCodeでvimキーバインドを実現するプラグインについて</description>
+    </item>
     
     <item>
       <title>ArchLinuxでMokeeをビルドする</title>
@@ -16,121 +78,9 @@
       <pubDate>Wed, 11 Jan 2017 02:09:46 +0000</pubDate>
       
       <guid>https://dohq.github.io/post/mokee/</guid>
-      <description>
-
-&lt;h2 id=&#34;自分メモ-mokee-mm-のビルド&#34;&gt;自分メモ Mokee(MM)のビルド&lt;/h2&gt;
-
-&lt;p&gt;Xiaomi Mi5(gemini)のMokeeをビルドしたのでそのメモ
-尚、対象デバイスはgemini(Xiaomi Mi5)とする。&lt;/p&gt;
-
-&lt;p&gt;開発ツール系はインストールしてあるよね？&lt;/p&gt;
-
-&lt;h3 id=&#34;環境&#34;&gt;環境&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;OS: Arch Linux
-Kernel: x86_64 Linux 4.8.13-1-ARCH
-Uptime: 4d 23h 59m
-Packages: 836
-Shell: zsh 5.3.1
-CPU: Intel Core i5-2520M CPU @ 3.2GHz
-RAM: 7292MiB / 15934MiB
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;以下雑なコマンド&#34;&gt;以下雑なコマンド&lt;/h3&gt;
-
-&lt;pre&gt;&lt;code&gt;yaourt -S repo imagemagick
-mkdir ~/Mokee &amp;amp;&amp;amp; cd $_
-virtualenv2 venv
-repo init -u https://github.com/MoKee/android.git -b mkm
-repo sync -j16
-. build/envsetup.sh
-. venv/bin/activate
-breakfast gemini
-mka bacon
-&lt;/code&gt;&lt;/pre&gt;
-
-&lt;h3 id=&#34;その他メモ&#34;&gt;その他メモ&lt;/h3&gt;
-
-&lt;p&gt;selinux permissiveのkernelを作る&lt;/p&gt;
-
-&lt;p&gt;device/xiaomi/gemini/BoardConfig.mk&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt; # Kernel
- BOARD_KERNEL_BASE := 0x80000000
--BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff
-+BOARD_KERNEL_CMDLINE := console=ttyHSL0,115200,n8 androidboot.console=ttyHSL0 androidboot.hardware=qcom user_debug=31 msm_rtb.filter=0x237 ehci-hcd.park=3 lpm_levels.sleep_disabled=1 cma=32M@0-0xffffffff androidboot.selinux=permissive
- BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
- BOARD_KERNEL_PAGESIZE := 4096
- BOARD_KERNEL_TAGS_OFFSET := 0x00000100
-&lt;/code&gt;&lt;/pre&gt;
-</description>
-    </item>
-    
-    <item>
-      <title>cv</title>
-      <link>https://dohq.github.io/about/</link>
-      <pubDate>Mon, 19 Dec 2016 18:23:58 +0900</pubDate>
-      
-      <guid>https://dohq.github.io/about/</guid>
-      <description>
-
-&lt;h4 id=&#34;name&#34;&gt;Name&lt;/h4&gt;
-
-&lt;p&gt;前島竜太郎&lt;/p&gt;
-
-&lt;h4 id=&#34;age&#34;&gt;Age&lt;/h4&gt;
-
-&lt;p&gt;26&lt;/p&gt;
-
-&lt;h4 id=&#34;gender&#34;&gt;Gender&lt;/h4&gt;
-
-&lt;p&gt;男性&lt;/p&gt;
-
-&lt;h4 id=&#34;job&#34;&gt;Job&lt;/h4&gt;
-
-&lt;p&gt;駆け出しインフラエンジニア、やってます&lt;/p&gt;
-
-&lt;h4 id=&#34;skill&#34;&gt;Skill&lt;/h4&gt;
-
-&lt;ul&gt;
-&lt;li&gt;Linuxを用いたシステム構築が得意です
-
-&lt;ul&gt;
-&lt;li&gt;RHEL&lt;/li&gt;
-&lt;li&gt;CentOS&lt;/li&gt;
-&lt;li&gt;SUSE Linux&lt;/li&gt;
-&lt;li&gt;AIX&lt;/li&gt;
-&lt;li&gt;Solaris&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;運用バッチを書いてます
-
-&lt;ul&gt;
-&lt;li&gt;bash&lt;/li&gt;
-&lt;li&gt;ksh&lt;/li&gt;
-&lt;li&gt;perl&lt;/li&gt;
-&lt;li&gt;python&lt;/li&gt;
-&lt;li&gt;go&lt;/li&gt;
-&lt;li&gt;java&lt;/li&gt;
-&lt;li&gt;c&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;Gitなどモダンなツールも使用出来ます
-
-&lt;ul&gt;
-&lt;li&gt;Git&lt;/li&gt;
-&lt;li&gt;SVN&lt;/li&gt;
-&lt;li&gt;docker&lt;/li&gt;
-&lt;li&gt;vagrant&lt;/li&gt;
-&lt;li&gt;chef&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;li&gt;ほかに出来る事
-
-&lt;ul&gt;
-&lt;li&gt;AWSでインスタンス立てるくらいは出来ます(lamdaはまだ業務で使用した事はありません)&lt;/li&gt;
-&lt;li&gt;在職中の会社ホームページを管理してます&lt;/li&gt;
-&lt;li&gt;VimVimしてます&lt;/li&gt;
-&lt;/ul&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</description>
+      <description>自分メモ Mokee(MM)のビルド Xiaomi Mi5(gemini)のMokeeをビルドしたのでそのメモ 尚、対象デバイスはgemini(Xiaomi Mi5)とする。
+開発ツール系はインストールしてあるよね？
+環境 OS: Arch Linux Kernel: x86_64 Linux 4.8.13-1-ARCH Uptime: 4d 23h 59m Packages: 836 Shell: zsh 5.3.1 CPU: Intel Core i5-2520M CPU @ 3.2GHz RAM: 7292MiB / 15934MiB  以下雑なコマンド yaourt -S repo imagemagick mkdir ~/Mokee &amp;amp;&amp;amp; cd $_ virtualenv2 venv repo init -u https://github.com/MoKee/android.git -b mkm repo sync -j16 . build/envsetup.sh . venv/bin/activate breakfast gemini mka bacon  その他メモ selinux permissiveのkernelを作る</description>
     </item>
     
   </channel>

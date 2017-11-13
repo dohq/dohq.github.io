@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tags on やるだけやる</title>
+    <link>https://dohq.github.io/tags/</link>
+    <description>Recent content in Tags on やるだけやる</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-US</language>
+    <copyright>2017 R.Maejima</copyright>
+    <lastBuildDate>Wed, 11 Jan 2017 02:09:46 +0000</lastBuildDate>
+    
+	<atom:link href="https://dohq.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Android</title>
+      <link>https://dohq.github.io/tags/android/</link>
+      <pubDate>Wed, 11 Jan 2017 02:09:46 +0000</pubDate>
+      
+      <guid>https://dohq.github.io/tags/android/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Editors</title>
+      <link>https://dohq.github.io/tags/editors/</link>
+      <pubDate>Wed, 08 Nov 2017 11:50:07 +0900</pubDate>
+      
+      <guid>https://dohq.github.io/tags/editors/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mokee</title>
+      <link>https://dohq.github.io/tags/mokee/</link>
+      <pubDate>Wed, 11 Jan 2017 02:09:46 +0000</pubDate>
+      
+      <guid>https://dohq.github.io/tags/mokee/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vim</title>
+      <link>https://dohq.github.io/tags/vim/</link>
+      <pubDate>Wed, 08 Nov 2017 11:50:07 +0900</pubDate>
+      
+      <guid>https://dohq.github.io/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
