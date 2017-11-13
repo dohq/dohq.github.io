@@ -33,7 +33,7 @@ Skill  Linuxを用いたシステム構築が得意です  RHEL CentOS SUSE Linu
       <guid>https://dohq.github.io/post/vimconf2017/</guid>
       <description>何勘違いしてるんだ?まだ俺のvimconf2017は終了してないぜ 周回遅れにも程がありますが2017年11月4日に開催されたvimconf2017に参加しましたので、
 その感想をば
-AM Vim, Me and Community (haya14busa) incsearch.vim/vim-easymotionなどのauthorです。
+GoZen Vim, Me and Community (haya14busa) incsearch.vim/vim-easymotionなどのauthorです。
 私自身vim-easymotionは外せないプラギンなので足を向けて寝れませんね。
 発表については、haya14busaさんとvimの歴史についてでした。
 vimを使い始めた理由が「なんとなくかっこよかったから」は激しく同意。
@@ -65,7 +65,7 @@ Talk show (Vim 鼎談) kaoriyaさんÎÝattnさんÎÝ-takataさんの3名によ
 mattnさんもおっしゃってしたが、2016年のvimアドベントカレンダーに書いて頂いた時、
 自分もすぐさまパッチ当てて使ってました。これ無しではもう生きれない体になってます。
 それと、ここで始めて生mattnさんを見ました。twitterでエゴサしてたけど「mattnさん服着てる…？」みたいなの多すぎでした。
-Gogo Creating your lovely color scheme (kokopon) Icebergというcolorschemeのauthor
+GoGo Creating your lovely color scheme (kokopon) Icebergというcolorschemeのauthor
 自分はここ1年くらいbase16-ashesを使ってるのですが、同じように暗めなcolorschemeなので興味深く拝見させて頂きました。
 「まずコンセプトを決める事。なにか迷ったらコンセプトを元にする」
 至言ですね！
