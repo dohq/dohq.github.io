@@ -5,18 +5,35 @@
     <link>https://dohq.github.io/</link>
     <description>Recent content on やるだけやる</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
+    <language>en-us</language>
+    <managingEditor>dorastone@gmail.com</managingEditor>
+    <webMaster>dorastone@gmail.com</webMaster>
     <copyright>2017 R.Maejima</copyright>
-    <lastBuildDate>Sun, 12 Nov 2017 18:23:58 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 03 Jan 2018 03:08:22 +0900</lastBuildDate>
     
 	<atom:link href="https://dohq.github.io/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>VirtualMachineディレクトリを移動する</title>
+      <link>https://dohq.github.io/posts/move-virtualmachine-dir/</link>
+      <pubDate>Wed, 03 Jan 2018 03:08:22 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/posts/move-virtualmachine-dir/</guid>
+      <description>既存仮想マシンがある状態でVirtualMachineディレクトリを移動したい VirtualMachineディレクトリを移動してvirtualboxからaddしようとすると
+Failed to open virtual machine located in /mnt/ssd/VirtualMachine/Windows7/Windows7.vbox. Cannot register the hard disk &#39;&amp;lt;新VDIパス&amp;gt;&#39; {UUID} because a hard disk &#39;&amp;lt;旧VDIパス&amp;gt;&#39; with UUID {UUID} already exists. Result Code: NS_ERROR_INVALID_ARG (0x80070057) Component: VirtualBoxWrap Interface: IVirtualBox {9570b9d5-f1a1-448a-10c5-e12f5285adad}  って言われてつらかった。
+自分ではこれで上手くいったって手順なのであしからず
+手順 VBoxManage internalcommands sethduuid &amp;lt;新VDIパス&amp;gt;
+新しいUUIDをコピー
+vboxファイルの HardDisk セクションに上記UUIDで置換
+これでどうですかね</description>
+    </item>
+    
+    <item>
       <title>cv</title>
       <link>https://dohq.github.io/about/</link>
       <pubDate>Sun, 12 Nov 2017 18:23:58 +0900</pubDate>
-      
+      <author>dorastone@gmail.com</author>
       <guid>https://dohq.github.io/about/</guid>
       <description> Name 前島竜太郎
 Age 27
@@ -27,10 +44,10 @@ Skill  Linuxを用いたシステム構築が得意です  RHEL CentOS SUSE Linu
     
     <item>
       <title>Vimconf2017</title>
-      <link>https://dohq.github.io/post/vimconf2017/</link>
+      <link>https://dohq.github.io/posts/vimconf2017/</link>
       <pubDate>Wed, 08 Nov 2017 11:50:07 +0900</pubDate>
-      
-      <guid>https://dohq.github.io/post/vimconf2017/</guid>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/posts/vimconf2017/</guid>
       <description>何勘違いしてるんだ?まだ俺のvimconf2017は終了してないぜ 周回遅れにも程がありますが2017年11月4日に開催されたvimconf2017に参加しましたので、
 その感想をば
 GoZen Vim, Me and Community (haya14busa) incsearch.vim/vim-easymotionなどのauthorです。
@@ -74,28 +91,13 @@ vim-mode-plus: The most ambitious vim emulator in the world (t9md) VisualStudioC
     
     <item>
       <title>ArchLinuxでMokeeをビルドする</title>
-      <link>https://dohq.github.io/post/mokee/</link>
+      <link>https://dohq.github.io/posts/mokee/</link>
       <pubDate>Wed, 11 Jan 2017 02:09:46 +0000</pubDate>
-      
-      <guid>https://dohq.github.io/post/mokee/</guid>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/posts/mokee/</guid>
       <description>自分メモ Mokee(MM)のビルド Xiaomi Mi5(gemini)のMokeeをビルドしたのでそのメモ 尚、対象デバイスはgemini(Xiaomi Mi5)とする。
 開発ツール系はインストールしてあるよね？
 環境 OS: Arch Linux Kernel: x86_64 Linux 4.8.13-1-ARCH Uptime: 4d 23h 59m Packages: 836 Shell: zsh 5.3.1 CPU: Intel Core i5-2520M CPU @ 3.2GHz RAM: 7292MiB / 15934MiB  以下雑なコマンド yaourt -S repo imagemagick mkdir ~/Mokee &amp;amp;&amp;amp; cd $_ virtualenv2 venv repo init -u https://github.com/MoKee/android.git -b mkm repo sync -j16 . build/envsetup.sh . venv/bin/activate breakfast gemini mka bacon  その他メモ selinux permissiveのkernelを作る</description>
-    </item>
-    
-    <item>
-      <title>VirtualMachineディレクトリを移動する</title>
-      <link>https://dohq.github.io/post/move-virtualmachine-dir/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dohq.github.io/post/move-virtualmachine-dir/</guid>
-      <description>既存仮想マシンがある状態でVirtualMachineディレクトリを移動したい VirtualMachineディレクトリを移動してvirtualboxからaddしようとすると
-Failed to open virtual machine located in /mnt/ssd/VirtualMachine/Windows7/Windows7.vbox. Cannot register the hard disk &#39;&amp;lt;新VDIパス&amp;gt;&#39; {UUID} because a hard disk &#39;&amp;lt;旧VDIパス&amp;gt;&#39; with UUID {UUID} already exists. Result Code: NS_ERROR_INVALID_ARG (0x80070057) Component: VirtualBoxWrap Interface: IVirtualBox {9570b9d5-f1a1-448a-10c5-e12f5285adad}  って言われてつらかった。
-自分ではこれで上手くいったって手順なのであしからず
-手順 VBoxManage internalcommands sethduuid &amp;lt;新VDIパス&amp;gt;
-新しいUUIDをコピー
-vboxファイルの HardDisk セクションに上記UUIDで置換
-これでどうですかね</description>
     </item>
     
   </channel>

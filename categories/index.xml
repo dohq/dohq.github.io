@@ -5,55 +5,29 @@
     <link>https://dohq.github.io/categories/</link>
     <description>Recent content in Categories on やるだけやる</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
+    <language>en-us</language>
+    <managingEditor>dorastone@gmail.com</managingEditor>
+    <webMaster>dorastone@gmail.com</webMaster>
     <copyright>2017 R.Maejima</copyright>
-    <lastBuildDate>Wed, 11 Jan 2017 02:09:46 +0000</lastBuildDate>
     
 	<atom:link href="https://dohq.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Android</title>
-      <link>https://dohq.github.io/categories/android/</link>
-      <pubDate>Wed, 11 Jan 2017 02:09:46 +0000</pubDate>
-      
-      <guid>https://dohq.github.io/categories/android/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Mokee</title>
-      <link>https://dohq.github.io/categories/mokee/</link>
-      <pubDate>Wed, 11 Jan 2017 02:09:46 +0000</pubDate>
-      
-      <guid>https://dohq.github.io/categories/mokee/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vim</title>
-      <link>https://dohq.github.io/categories/vim/</link>
+      <title>Implessions</title>
+      <link>https://dohq.github.io/categories/implessions/</link>
       <pubDate>Wed, 08 Nov 2017 11:50:07 +0900</pubDate>
-      
-      <guid>https://dohq.github.io/categories/vim/</guid>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/categories/implessions/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Vimconf</title>
-      <link>https://dohq.github.io/categories/vimconf/</link>
-      <pubDate>Wed, 08 Nov 2017 11:50:07 +0900</pubDate>
-      
-      <guid>https://dohq.github.io/categories/vimconf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Virtualbox</title>
-      <link>https://dohq.github.io/categories/virtualbox/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://dohq.github.io/categories/virtualbox/</guid>
+      <title>Tips</title>
+      <link>https://dohq.github.io/categories/tips/</link>
+      <pubDate>Wed, 03 Jan 2018 03:08:22 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/categories/tips/</guid>
       <description></description>
     </item>
     

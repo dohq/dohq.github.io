@@ -3,8 +3,8 @@
 <head>
   
   <meta charset="utf-8">
-  <title>やるだけやる</title>
-  <meta name="description" content="やるだけやる">
+  <title>VirtualMachineディレクトリを移動する</title>
+  <meta name="description" content="VirtualMachineディレクトリを移動する">
   <meta name="author" content="">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -336,8 +336,6 @@ body {
 
   
   
-  <link href="https://dohq.github.io/index.xml" rel="alternate" type="application/rss+xml" title="やるだけやる Feed" />
-  
 
   <meta name="generator" content="Hugo 0.33-DEV" />
   
@@ -375,97 +373,59 @@ body {
 
 <div class="pure-g">
   <div class="pure-u-1-24 pure-u-md-1-6"></div>
-	<div class="pure-u-11-12 pure-u-md-2-3">
-	<div class="post-content">
-	
-	  <p class="posts-name">Recent posts:</p>
+  <div class="pure-u-11-12 pure-u-md-2-3">
+    <div class="post">
 
-	  <ul class="posts">
-		
-		
-		
-		<li>
-		  
-		  <a class="post-list" href="https://dohq.github.io/posts/move-virtualmachine-dir/">VirtualMachineディレクトリを移動する</a>
+      <div class="post-title">
+        <p class="footnote">
+        <time class="">01-03-2018</time>
+        
+        
+        |
+        
+        
+        tags: [ <a href="https://dohq.github.io/tags/virtualbox">virtualbox</a> <a href="https://dohq.github.io/tags/archlinux">archlinux</a> ]
+        
 
-		  <p class="footnote">
-			<time datetime="01-03-2018T03:08:22&#43;09:00">01-03-2018</time>
+        
+        categories: [<a href="https://dohq.github.io/categories/tips">tips</a> ]
+        
 
-			
-		  |	
-			
+        
+        </p>
+        <h1>VirtualMachineディレクトリを移動する</h1>
+      </div>
 
-			
-			tags: [ <a href="https://dohq.github.io/tags/virtualbox">virtualbox</a> <a href="https://dohq.github.io/tags/archlinux">archlinux</a> ]
-			
+      <div class="post-content">
+        
 
-			
-			categories: [ <a href="https://dohq.github.io/categories/tips">tips</a> ]
-			
+<h1 id="既存仮想マシンがある状態でvirtualmachineディレクトリを移動したい">既存仮想マシンがある状態でVirtualMachineディレクトリを移動したい</h1>
 
-			
+<p>VirtualMachineディレクトリを移動してvirtualboxからaddしようとすると</p>
 
-		  </p>
-		</li>
-		
-		
-		
-		
-		
-		<li>
-		  
-		  <a class="post-list" href="https://dohq.github.io/posts/vimconf2017/">Vimconf2017</a>
+<pre><code>Failed to open virtual machine located in /mnt/ssd/VirtualMachine/Windows7/Windows7.vbox.
 
-		  <p class="footnote">
-			<time datetime="11-08-2017T11:50:07&#43;09:00">11-08-2017</time>
+Cannot register the hard disk '&lt;新VDIパス&gt;' {UUID} because a hard disk '&lt;旧VDIパス&gt;' with UUID {UUID} already exists.
 
-			
-		  |	
-			
+Result Code: NS_ERROR_INVALID_ARG (0x80070057)
+Component: VirtualBoxWrap
+Interface: IVirtualBox {9570b9d5-f1a1-448a-10c5-e12f5285adad}
+</code></pre>
 
-			
-			tags: [ <a href="https://dohq.github.io/tags/vim">vim</a> <a href="https://dohq.github.io/tags/editors">editors</a> ]
-			
+<p>って言われてつらかった。<br />
+自分ではこれで上手くいったって手順なのであしからず</p>
 
-			
-			categories: [ <a href="https://dohq.github.io/categories/implessions">Implessions</a> ]
-			
+<h3 id="手順">手順</h3>
 
-			
+<p><code>VBoxManage internalcommands sethduuid &lt;新VDIパス&gt;</code></p>
 
-		  </p>
-		</li>
-		
-		
-		
-		<li>
-		  
-		  <a class="post-list" href="https://dohq.github.io/posts/mokee/">ArchLinuxでMokeeをビルドする</a>
+<p>新しいUUIDをコピー<br />
+vboxファイルの <em>HardDisk</em> セクションに上記UUIDで置換<br />
+これでどうですかね</p>
 
-		  <p class="footnote">
-			<time datetime="01-11-2017T02:09:46Z">01-11-2017</time>
-
-			
-		  |	
-			
-
-			
-			tags: [ <a href="https://dohq.github.io/tags/android">android</a> <a href="https://dohq.github.io/tags/mokee">Mokee</a> ]
-			
-
-			
-			categories: [ <a href="https://dohq.github.io/categories/tips">tips</a> ]
-			
-
-			
-
-		  </p>
-		</li>
-		
-		
-	  </ul>
-	</div>
-	</div>
+      </div>
+    </div>
+  </div>
   <div class="pure-u-1-24 pure-u-md-1-6"></div>
 </div>
 
@@ -497,7 +457,7 @@ body {
 
         </ul>
         <a href="#" class="pure-menu-link pull-right" id="gototop-btn">↑↑</a>
-        <a href="https://dohq.github.io/index.xml" class="pure-menu-link pull-right">RSS</a>
+        <a href="" class="pure-menu-link pull-right">RSS</a>
       </div>
       
       <p id="foot-copyright">2017 R.Maejima</p>

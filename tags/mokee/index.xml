@@ -5,7 +5,9 @@
     <link>https://dohq.github.io/tags/mokee/</link>
     <description>Recent content in Mokee on やるだけやる</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
+    <language>en-us</language>
+    <managingEditor>dorastone@gmail.com</managingEditor>
+    <webMaster>dorastone@gmail.com</webMaster>
     <copyright>2017 R.Maejima</copyright>
     <lastBuildDate>Wed, 11 Jan 2017 02:09:46 +0000</lastBuildDate>
     
@@ -14,10 +16,10 @@
     
     <item>
       <title>ArchLinuxでMokeeをビルドする</title>
-      <link>https://dohq.github.io/post/mokee/</link>
+      <link>https://dohq.github.io/posts/mokee/</link>
       <pubDate>Wed, 11 Jan 2017 02:09:46 +0000</pubDate>
-      
-      <guid>https://dohq.github.io/post/mokee/</guid>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/posts/mokee/</guid>
       <description>自分メモ Mokee(MM)のビルド Xiaomi Mi5(gemini)のMokeeをビルドしたのでそのメモ 尚、対象デバイスはgemini(Xiaomi Mi5)とする。
 開発ツール系はインストールしてあるよね？
 環境 OS: Arch Linux Kernel: x86_64 Linux 4.8.13-1-ARCH Uptime: 4d 23h 59m Packages: 836 Shell: zsh 5.3.1 CPU: Intel Core i5-2520M CPU @ 3.2GHz RAM: 7292MiB / 15934MiB  以下雑なコマンド yaourt -S repo imagemagick mkdir ~/Mokee &amp;amp;&amp;amp; cd $_ virtualenv2 venv repo init -u https://github.com/MoKee/android.git -b mkm repo sync -j16 . build/envsetup.sh . venv/bin/activate breakfast gemini mka bacon  その他メモ selinux permissiveのkernelを作る</description>

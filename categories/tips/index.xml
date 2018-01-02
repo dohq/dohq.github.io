@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Archlinux on やるだけやる</title>
-    <link>https://dohq.github.io/tags/archlinux/</link>
-    <description>Recent content in Archlinux on やるだけやる</description>
+    <title>Tips on やるだけやる</title>
+    <link>https://dohq.github.io/categories/tips/</link>
+    <description>Recent content in Tips on やるだけやる</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <managingEditor>dorastone@gmail.com</managingEditor>
@@ -11,7 +11,7 @@
     <copyright>2017 R.Maejima</copyright>
     <lastBuildDate>Wed, 03 Jan 2018 03:08:22 +0900</lastBuildDate>
     
-	<atom:link href="https://dohq.github.io/tags/archlinux/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://dohq.github.io/categories/tips/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
@@ -27,6 +27,17 @@ Failed to open virtual machine located in /mnt/ssd/VirtualMachine/Windows7/Windo
 新しいUUIDをコピー
 vboxファイルの HardDisk セクションに上記UUIDで置換
 これでどうですかね</description>
+    </item>
+    
+    <item>
+      <title>ArchLinuxでMokeeをビルドする</title>
+      <link>https://dohq.github.io/posts/mokee/</link>
+      <pubDate>Wed, 11 Jan 2017 02:09:46 +0000</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/posts/mokee/</guid>
+      <description>自分メモ Mokee(MM)のビルド Xiaomi Mi5(gemini)のMokeeをビルドしたのでそのメモ 尚、対象デバイスはgemini(Xiaomi Mi5)とする。
+開発ツール系はインストールしてあるよね？
+環境 OS: Arch Linux Kernel: x86_64 Linux 4.8.13-1-ARCH Uptime: 4d 23h 59m Packages: 836 Shell: zsh 5.3.1 CPU: Intel Core i5-2520M CPU @ 3.2GHz RAM: 7292MiB / 15934MiB  以下雑なコマンド yaourt -S repo imagemagick mkdir ~/Mokee &amp;amp;&amp;amp; cd $_ virtualenv2 venv repo init -u https://github.com/MoKee/android.git -b mkm repo sync -j16 . build/envsetup.sh . venv/bin/activate breakfast gemini mka bacon  その他メモ selinux permissiveのkernelを作る</description>
     </item>
     
   </channel>

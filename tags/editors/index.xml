@@ -5,7 +5,9 @@
     <link>https://dohq.github.io/tags/editors/</link>
     <description>Recent content in Editors on やるだけやる</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
+    <language>en-us</language>
+    <managingEditor>dorastone@gmail.com</managingEditor>
+    <webMaster>dorastone@gmail.com</webMaster>
     <copyright>2017 R.Maejima</copyright>
     <lastBuildDate>Wed, 08 Nov 2017 11:50:07 +0900</lastBuildDate>
     
@@ -14,10 +16,10 @@
     
     <item>
       <title>Vimconf2017</title>
-      <link>https://dohq.github.io/post/vimconf2017/</link>
+      <link>https://dohq.github.io/posts/vimconf2017/</link>
       <pubDate>Wed, 08 Nov 2017 11:50:07 +0900</pubDate>
-      
-      <guid>https://dohq.github.io/post/vimconf2017/</guid>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/posts/vimconf2017/</guid>
       <description>何勘違いしてるんだ?まだ俺のvimconf2017は終了してないぜ 周回遅れにも程がありますが2017年11月4日に開催されたvimconf2017に参加しましたので、
 その感想をば
 GoZen Vim, Me and Community (haya14busa) incsearch.vim/vim-easymotionなどのauthorです。

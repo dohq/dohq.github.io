@@ -5,7 +5,9 @@
     <link>https://dohq.github.io/tags/</link>
     <description>Recent content in Tags on やるだけやる</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-US</language>
+    <language>en-us</language>
+    <managingEditor>dorastone@gmail.com</managingEditor>
+    <webMaster>dorastone@gmail.com</webMaster>
     <copyright>2017 R.Maejima</copyright>
     <lastBuildDate>Wed, 11 Jan 2017 02:09:46 +0000</lastBuildDate>
     
@@ -16,7 +18,7 @@
       <title>Android</title>
       <link>https://dohq.github.io/tags/android/</link>
       <pubDate>Wed, 11 Jan 2017 02:09:46 +0000</pubDate>
-      
+      <author>dorastone@gmail.com</author>
       <guid>https://dohq.github.io/tags/android/</guid>
       <description></description>
     </item>
@@ -24,8 +26,8 @@
     <item>
       <title>Archlinux</title>
       <link>https://dohq.github.io/tags/archlinux/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+      <pubDate>Wed, 03 Jan 2018 03:08:22 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
       <guid>https://dohq.github.io/tags/archlinux/</guid>
       <description></description>
     </item>
@@ -34,7 +36,7 @@
       <title>Editors</title>
       <link>https://dohq.github.io/tags/editors/</link>
       <pubDate>Wed, 08 Nov 2017 11:50:07 +0900</pubDate>
-      
+      <author>dorastone@gmail.com</author>
       <guid>https://dohq.github.io/tags/editors/</guid>
       <description></description>
     </item>
@@ -43,7 +45,7 @@
       <title>Mokee</title>
       <link>https://dohq.github.io/tags/mokee/</link>
       <pubDate>Wed, 11 Jan 2017 02:09:46 +0000</pubDate>
-      
+      <author>dorastone@gmail.com</author>
       <guid>https://dohq.github.io/tags/mokee/</guid>
       <description></description>
     </item>
@@ -52,7 +54,7 @@
       <title>Vim</title>
       <link>https://dohq.github.io/tags/vim/</link>
       <pubDate>Wed, 08 Nov 2017 11:50:07 +0900</pubDate>
-      
+      <author>dorastone@gmail.com</author>
       <guid>https://dohq.github.io/tags/vim/</guid>
       <description></description>
     </item>
@@ -60,8 +62,8 @@
     <item>
       <title>Virtualbox</title>
       <link>https://dohq.github.io/tags/virtualbox/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
+      <pubDate>Wed, 03 Jan 2018 03:08:22 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
       <guid>https://dohq.github.io/tags/virtualbox/</guid>
       <description></description>
     </item>
