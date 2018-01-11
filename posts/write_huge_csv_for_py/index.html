@@ -3,8 +3,8 @@
 <head>
   
   <meta charset="utf-8">
-  <title>やるだけやる</title>
-  <meta name="description" content="やるだけやる">
+  <title>メモリに乗らない量のselect結果をcsvへ書き出す(python)</title>
+  <meta name="description" content="メモリに乗らない量のselect結果をcsvへ書き出す(python)">
   <meta name="author" content="">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -336,8 +336,6 @@ body {
 
   
   
-  <link href="https://dohq.github.io/index.xml" rel="alternate" type="application/rss+xml" title="やるだけやる Feed" />
-  
 
   <meta name="generator" content="Hugo 0.33-DEV" />
   
@@ -375,99 +373,57 @@ body {
 
 <div class="pure-g">
   <div class="pure-u-1-24 pure-u-md-1-6"></div>
-	<div class="pure-u-11-12 pure-u-md-2-3">
-	<div class="post-content">
-	
-	  <p class="posts-name">Recent posts:</p>
+  <div class="pure-u-11-12 pure-u-md-2-3">
+    <div class="post">
 
-	  <ul class="posts">
-		
-		
-		
-		
-		
-		<li>
-		  
-		  <a class="post-list" href="https://dohq.github.io/posts/move-virtualmachine-dir/">VirtualMachineディレクトリを移動する</a>
+      <div class="post-title">
+        <p class="footnote">
+        <time class="">01-10-2018</time>
+        
+        
+        
 
-		  <p class="footnote">
-			<time datetime="01-03-2018T03:08:22&#43;09:00">01-03-2018</time>
+        
 
-			
-		  |	
-			
+        
+        </p>
+        <h1>メモリに乗らない量のselect結果をcsvへ書き出す(python)</h1>
+      </div>
 
-			
-			tags: [ <a href="https://dohq.github.io/tags/virtualbox">virtualbox</a> <a href="https://dohq.github.io/tags/archlinux">archlinux</a> ]
-			
+      <div class="post-content">
+        
 
-			
-			categories: [ <a href="https://dohq.github.io/categories/tips">tips</a> ]
-			
+<h1 id="数百gbデータでもcsvに書き出したい">数百GBデータでもcsvに書き出したい！</h1>
 
-			
+<p>業務用のツールを作成する際、 <strong>DBのselect結果をcsvへ書き出したい</strong><br />
+という要望は結構あるかと思います。<br />
+でもって適当にcur作ってfetchallしてcsv.writerってやるんですがselect結果がうん千万件とかになるとfetchallした瞬間にメモリを食い潰していきます。<br />
+気がついたらインスタンスが死んでたということもしばしば(当社比)</p>
 
-		  </p>
-		</li>
-		
-		
-		
-		
-		
-		<li>
-		  
-		  <a class="post-list" href="https://dohq.github.io/posts/vimconf2017/">Vimconf2017</a>
+<h2 id="どーしたか">どーしたか</h2>
 
-		  <p class="footnote">
-			<time datetime="11-08-2017T11:50:07&#43;09:00">11-08-2017</time>
+<p>まずコード</p>
 
-			
-		  |	
-			
+<pre><code class="language-python">def write_sql_result(sql, day, fname):
+    conn = d.con_pos(connect)
+    chunks = psql.read_sql(sql=sql,
+                           con=conn,
+                           chunksize=5000)
+    with open(fname, 'w') as f:
+        for r in chunks:
+            r.to_csv(f, sep=',',
+                     header=False,
+                     na_rep='',
+                     index=False)
+</code></pre>
 
-			
-			tags: [ <a href="https://dohq.github.io/tags/vim">vim</a> <a href="https://dohq.github.io/tags/editors">editors</a> ]
-			
+<p>結局、pandas.io.sqlで <strong>chunksize</strong> を設定し、 <em>TextFileReader</em> をforで回しつつcsvへ書き出すようにした。
+その分ディスクIOが断続的に起きますがまぁそこはもうしょうがない<br />
+chunksizeは知見だったので、メモ</p>
 
-			
-			categories: [ <a href="https://dohq.github.io/categories/implessions">Implessions</a> ]
-			
-
-			
-
-		  </p>
-		</li>
-		
-		
-		
-		<li>
-		  
-		  <a class="post-list" href="https://dohq.github.io/posts/mokee/">ArchLinuxでMokeeをビルドする</a>
-
-		  <p class="footnote">
-			<time datetime="01-11-2017T02:09:46Z">01-11-2017</time>
-
-			
-		  |	
-			
-
-			
-			tags: [ <a href="https://dohq.github.io/tags/android">android</a> <a href="https://dohq.github.io/tags/mokee">Mokee</a> ]
-			
-
-			
-			categories: [ <a href="https://dohq.github.io/categories/tips">tips</a> ]
-			
-
-			
-
-		  </p>
-		</li>
-		
-		
-	  </ul>
-	</div>
-	</div>
+      </div>
+    </div>
+  </div>
   <div class="pure-u-1-24 pure-u-md-1-6"></div>
 </div>
 
@@ -499,7 +455,7 @@ body {
 
         </ul>
         <a href="#" class="pure-menu-link pull-right" id="gototop-btn">↑↑</a>
-        <a href="https://dohq.github.io/index.xml" class="pure-menu-link pull-right">RSS</a>
+        <a href="" class="pure-menu-link pull-right">RSS</a>
       </div>
       
       <p id="foot-copyright">2017 R.Maejima</p>
