@@ -24,7 +24,7 @@
 という要望は結構あるかと思います。
 でもって適当にcur作ってfetchallしてcsv.writerってやるんですがselect結果がうん千万件とかになるとfetchallした瞬間にメモリを食い潰していきます。
 気がついたらインスタンスが死んでたということもしばしば(当社比)
-どーしたか まずコード
+どーしたか コード
 def write_sql_result(sql, day, fname): conn = d.con_pos(connect) chunks = psql.read_sql(sql=sql, con=conn, chunksize=5000) with open(fname, &#39;w&#39;) as f: for r in chunks: r.to_csv(f, sep=&#39;,&#39;, header=False, na_rep=&#39;&#39;, index=False)  結局、pandas.io.sqlで chunksize を設定し、 TextFileReader をforで回しつつcsvへ書き出すようにした。 その分ディスクIOが断続的に起きますがまぁそこはもうしょうがない
 chunksizeは知見だったので、メモ</description>
     </item>

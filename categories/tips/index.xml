@@ -9,10 +9,25 @@
     <managingEditor>dorastone@gmail.com</managingEditor>
     <webMaster>dorastone@gmail.com</webMaster>
     <copyright>2017 R.Maejima</copyright>
-    <lastBuildDate>Wed, 03 Jan 2018 03:08:22 +0900</lastBuildDate>
+    <lastBuildDate>Wed, 10 Jan 2018 18:27:24 +0900</lastBuildDate>
     
 	<atom:link href="https://dohq.github.io/categories/tips/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>メモリに乗らない量のselect結果をcsvへ書き出す(python)</title>
+      <link>https://dohq.github.io/posts/write_huge_csv_for_py/</link>
+      <pubDate>Wed, 10 Jan 2018 18:27:24 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/posts/write_huge_csv_for_py/</guid>
+      <description>数百GBデータでもcsvに書き出したい！ 業務用のツールを作成する際、 DBのselect結果をcsvへ書き出したい
+という要望は結構あるかと思います。
+でもって適当にcur作ってfetchallしてcsv.writerってやるんですがselect結果がうん千万件とかになるとfetchallした瞬間にメモリを食い潰していきます。
+気がついたらインスタンスが死んでたということもしばしば(当社比)
+どーしたか コード
+def write_sql_result(sql, day, fname): conn = d.con_pos(connect) chunks = psql.read_sql(sql=sql, con=conn, chunksize=5000) with open(fname, &#39;w&#39;) as f: for r in chunks: r.to_csv(f, sep=&#39;,&#39;, header=False, na_rep=&#39;&#39;, index=False)  結局、pandas.io.sqlで chunksize を設定し、 TextFileReader をforで回しつつcsvへ書き出すようにした。 その分ディスクIOが断続的に起きますがまぁそこはもうしょうがない
+chunksizeは知見だったので、メモ</description>
+    </item>
     
     <item>
       <title>VirtualMachineディレクトリを移動する</title>
