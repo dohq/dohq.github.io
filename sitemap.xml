@@ -103,13 +103,13 @@
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/vim/</loc>
+    <loc>https://dohq.github.io/categories/vim/</loc>
     <lastmod>2018-12-17T10:23:00+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/categories/vim/</loc>
+    <loc>https://dohq.github.io/tags/vim/</loc>
     <lastmod>2018-12-17T10:23:00+09:00</lastmod>
     <priority>0</priority>
   </url>
