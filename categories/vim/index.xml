@@ -24,8 +24,8 @@
 訳: Vimconf2018行けなかった…
 WindowsでVimのビルドしてみようか！ 本当はVimconfの感想記事とか書こうと思ったのですがなんの成果も得られなかった為急遽別ネタを書きます。
 msvc(VisualStudio)でビルドします。
-ついでにpython3/terminal/luaを有効にします。
-(rubyもperlも自分が使ってるプラグインには必要無いので…)
+ついでにpython3/terminalを有効にします。
+(luaもrubyもperlも自分が使ってるプラグインには必要無いので…)
 今回使用した環境  Windows10 快適なネット接続環境  また、ビルドに使うマシンのスペックについてはVisualStudio 2017 CommunityEditionの システム要件に則ります。
 てじゅーん 今回は D:\build-vim 以下にビルドに必要なものを放り込みます。
 必要なものインストール VS2017CE 今回はコミュニティエディションを使います。
