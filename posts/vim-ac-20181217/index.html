@@ -449,7 +449,7 @@ msvc(VisualStudio)でビルドします。<br />
 
 <p>毎回ビルドコマンド打つのもつらいので、今回はビルド用のbatファイルを作っておきます。</p>
 
-<pre><code class="language-bat">@echo off
+<pre><code class="language-dos">@echo off
 
 set PATH=%SystemRoot%
 set PATH=%PATH%;%SystemRoot%\System32
@@ -482,7 +482,7 @@ pushd D:\build-vim
 <p>vimは実行ファイルの他にもいくつか必要なファイルがあるため、それを配置します。<br />
 今回は <code>C:\vim</code> への配置を例にしてみます。</p>
 
-<pre><code class="language-bat">pushd D:\build-vim\vim\
+<pre><code class="language-dos">pushd D:\build-vim\vim\
 XCOPY /D /S /R /Y /I D:\build-vim\vim\runtime\* C:\vim\vim81\
 move src\*.exe C:\vim\
 COPY vimtutor* C:\vim\
@@ -495,7 +495,7 @@ COPY vimtutor* C:\vim\
 
 <h2 id="まとめ">まとめ</h2>
 
-<pre><code class="language-bat">@echo off
+<pre><code class="language-dos">@echo off
 
 set PATH=%SystemRoot%
 set PATH=%PATH%;%SystemRoot%\System32
@@ -574,6 +574,12 @@ COPY vimtutor* C:\vim\
 
 
   <script src="https://dohq.github.io/highlight/highlight.min.js"></script>
+  
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/go.min.js"></script>
+  
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/vim.min.js"></script>
+  
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/dos.min.js"></script>
    
   <script>hljs.initHighlighting();</script>
 
