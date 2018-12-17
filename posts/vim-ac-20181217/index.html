@@ -3,8 +3,8 @@
 <head>
   
   <meta charset="utf-8">
-  <title>Categories</title>
-  <meta name="description" content="Categories">
+  <title>Vim AdventCalendar 17日目</title>
+  <meta name="description" content="Vim AdventCalendar 17日目">
   <meta name="author" content="">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -336,8 +336,6 @@ body {
 
   
   
-  <link href="https://dohq.github.io/categories/index.xml" rel="alternate" type="application/rss+xml" title="やるだけやる Feed" />
-  
 
   <meta name="generator" content="Hugo 0.53-DEV" />
   
@@ -372,33 +370,168 @@ body {
     <div class="pure-u-1-24 pure-u-md-1-6"></div>
 </div>
 
+
 <div class="pure-g">
   <div class="pure-u-1-24 pure-u-md-1-6"></div>
   <div class="pure-u-11-12 pure-u-md-2-3">
-    <p class="posts-name">Categories:</p>
-    <div class="post-content">
-      <ul class="posts">
+    <div class="post">
+
+      <div class="post-title">
+        <p class="footnote">
+        <time class="">12-17-2018</time>
         
         
-        <li>
-          <a href="tips">tips</a>
-          <span>&#40;3&#41;</span>
-        </li>
+        |
         
-        <li>
-          <a href="implessions">implessions</a>
-          <span>&#40;1&#41;</span>
-        </li>
         
-        <li>
-          <a href="vim">vim</a>
-          <span>&#40;1&#41;</span>
-        </li>
+        tags: [ <a href="https://dohq.github.io/tags/vim">vim</a> <a href="https://dohq.github.io/tags/adventcalendar">AdventCalendar</a> ]
         
-      </ul>
+
+        
+        categories: [<a href="https://dohq.github.io/categories/vim">vim</a> ]
+        
+
+        
+        </p>
+        <h1>Vim AdventCalendar 17日目</h1>
+      </div>
+
+      <div class="post-content">
+        
+
+<p><strong>今回のVimconf2018でなんの成果も得られませませんでした！</strong><br />
+訳: Vimconf2018行けなかった…</p>
+
+<h1 id="windowsでvimのビルドしてみようか">WindowsでVimのビルドしてみようか！</h1>
+
+<p>本当はVimconfの感想記事とか書こうと思ったのですがなんの成果も得られなかった為急遽別ネタを書きます。<br />
+msvc(VisualStudio)でビルドします。<br />
+ついでにpython3/terminal/luaを有効にします。<br />
+(rubyもperlも自分が使ってるプラグインには必要無いので…)</p>
+
+<h2 id="今回使用した環境">今回使用した環境</h2>
+
+<ul>
+<li>Windows10</li>
+<li>快適なネット接続環境</li>
+</ul>
+
+<p>また、ビルドに使うマシンのスペックについてはVisualStudio 2017 CommunityEditionの <a href="https://docs.microsoft.com/ja-jp/visualstudio/productinfo/vs2017-system-requirements-vs">システム要件</a>に則ります。</p>
+
+<h2 id="てじゅーん">てじゅーん</h2>
+
+<p>今回は <code>D:\build-vim</code> 以下にビルドに必要なものを放り込みます。</p>
+
+<h3 id="必要なものインストール">必要なものインストール</h3>
+
+<h5 id="vs2017ce">VS2017CE</h5>
+
+<p>今回はコミュニティエディションを使います。<br />
+* <a href="https://visualstudio.microsoft.com/ja/downloads/">Microsoftのダウンロードページ</a>から <strong>コミュニティ</strong> をダウンロードして実行
+* Nextを連打していくとインストールするコンポーネントを選択する画面が出るので、以下のコンポーネントを選択
+  * 「ワークロード」タブの「C++ によるデスクトップ開発」</p>
+
+<h5 id="python3">Python3</h5>
+
+<p>既に純正PythonやAnacondaをインストールして使ってる人は特に追加で必要なものはありません。
+初めてです！という人は以下のPythonをインストールして下さい
+* <a href="https://www.python.org/downloads/release/python-366/">ダウンロードページ</a>から <strong>Windows x86-64 executable installer</strong> をインストールして下さい</p>
+
+<p><strong>※</strong> embededdableはvimのコンパイルに必要なヘッダファイルなどが無いので今回は使えません。</p>
+
+<h5 id="vim">vim</h5>
+
+<p>現在vimはgithub上で開発が進められているので、git cloneすればおk
+<code>https://github.com/vim/vim D:\build-vim\vim</code></p>
+
+<h3 id="ビルドする">ビルドする</h3>
+
+<p>毎回ビルドコマンド打つのもつらいので、今回はビルド用のbatファイルを作っておきます。</p>
+
+<pre><code class="language-build-vim.bat">@echo off
+
+set PATH=%SystemRoot%
+set PATH=%PATH%;%SystemRoot%\System32
+
+set INCLUDE=
+set LIBPATH=
+
+@call &quot;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat&quot; amd64
+
+set PY3= PYTHON3=&quot;&lt;&lt;Python3インストール先ディレクトリ&gt;&gt;&quot; PYTHON3_VER=36 DYNAMIC_PYTHON3=yes PYTHONThREEDLL=&lt;&lt;Python3インストール先ディレクトリ&gt;&gt;python36.dll
+
+set OPT= CPU=AMD64 FEATURES=HUGE USE_MSVCRT=yes MAP=no IME=yes MBYTE=yes ICONV=yes XPM=no TERMINAL=yes DEBUG=no
+set OPT2= %PY3%
+
+pushd D:\build-vim\vim\src
+rmdir /s /q ObjCULYHAMD64 ObjGXULYHAMD64
+nmake -f Make_mvc.mak clean
+nmake -f Make_mvc.mak %OPT% %OPT2% GUI=no
+nmake -f Make_mvc.mak %OPT% %OPT2% GUI=yes DIRECTX=yes
+pushd D:\build-vim
+</code></pre>
+
+<p>Python3インストール先ディレクトリを変更して下さい。<br />
+また、途中nmakeを2回実行しているのはgvimとvimをそれぞれビルドしているからです。<br />
+上記ファイルを作り終わったらコマンドプロンプトから実行してみて下さい。<br />
+エラーが出ていなければ <code>D:\build-vim\vim\src</code> 配下にvim.exeとかgvim.exeが出来ているはずです。</p>
+
+<h3 id="配置">配置</h3>
+
+<p>vimは実行ファイルの他にもいくつか必要なファイルがあるため、それを配置します。<br />
+今回は <code>C:\vim</code> への配置を例にしてみます。</p>
+
+<pre><code>pushd D:\build-vim\vim\
+XCOPY /D /S /R /Y /I D:\build-vim\vim\runtime\* C:\vim\vim81\
+move src\*.exe C:\vim\
+COPY vimtutor* C:\vim\
+</code></pre>
+
+<h3 id="テーレッテレー">テーレッテレー！</h3>
+
+<p><code>C:\vim</code> にパスを通しておけばいつでも最新のvimが使えますね！<br />
+ちなみに私は毎朝ログイン時にビルドバッチが走るようにしています。(vimのそーす更新もbatに入れ込めばおk)</p>
+
+<h2 id="まとめ">まとめ</h2>
+
+<pre><code>@echo off
+
+set PATH=%SystemRoot%
+set PATH=%PATH%;%SystemRoot%\System32
+
+set INCLUDE=
+set LIBPATH=
+
+@call &quot;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat&quot; amd64
+
+set PY3=PYTHON3=&quot;&lt;&lt;Python3インストール先ディレクトリ&gt;&gt;&quot; PYTHON3_VER=36 DYNAMIC_PYTHON3=yes PYTHONThREEDLL=&lt;&lt;Python3インストール先ディレクトリ&gt;&gt;python36.dll
+
+set OPT=CPU=AMD64 FEATURES=HUGE USE_MSVCRT=yes MAP=no IME=yes MBYTE=yes ICONV=yes XPM=no TERMINAL=yes DEBUG=no
+set OPT2=%PY3%
+
+pushd D:\build-vim\vim\src
+rmdir /s /q ObjCULYHAMD64 ObjGXULYHAMD64
+nmake -f Make_mvc.mak clean
+nmake -f Make_mvc.mak %OPT% %OPT2% GUI=no
+nmake -f Make_mvc.mak %OPT% %OPT2% GUI=yes DIRECTX=yes
+
+pushd D:\build-vim\vim\
+XCOPY /D /S /R /Y /I D:\build-vim\vim\runtime\* C:\vim\vim81\
+move src\*.exe C:\vim\
+COPY vimtutor* C:\vim\
+</code></pre>
+
+<p>ビルドと移動を一纏めにしたものです。<br />
+私の環境だとこれで問題無いのですが、実は昔に必要なものを入れていて上記設定だけだと足りないみたいな事があるかもしれないので、<br />
+なにかあったら修正コメントなんでも下さい!!<br />
+来年はVimconf行きたい…</p>
+
+      </div>
     </div>
   </div>
   <div class="pure-u-1-24 pure-u-md-1-6"></div>
+</div>
+
 <div class="footer pure-g">
   <div class="pure-u-1-24 pure-u-md-1-6"></div>
   <div class="pure-u-11-12 pure-u-md-2-3">
@@ -427,7 +560,7 @@ body {
 
         </ul>
         <a href="#" class="pure-menu-link pull-right" id="gototop-btn">↑↑</a>
-        <a href="https://dohq.github.io/categories/index.xml" class="pure-menu-link pull-right">RSS</a>
+        <a href="" class="pure-menu-link pull-right">RSS</a>
       </div>
       
       <p id="foot-copyright">2017 R.Maejima</p>

@@ -337,7 +337,7 @@ body {
   
   
 
-  <meta name="generator" content="Hugo 0.33-DEV" />
+  <meta name="generator" content="Hugo 0.53-DEV" />
   
 </head>
 <body>
@@ -408,24 +408,28 @@ body {
 
 <h2 id="どーしたか">どーしたか</h2>
 
-<p>コード</p>
+<p>※2018-10-07 update
+<del>結局、pandas.io.sqlで <strong>chunksize</strong> を設定し、 <em>TextFileReader</em> をforで回しつつcsvへ書き出すようにした。</del><br />
+<del>その分ディスクIOが断続的に起きますがまぁそこはもうしょうがない</del><br />
+<del>chunksizeは知見だったので、メモ</del></p>
 
-<pre><code class="language-python">def write_sql_result(sql, day, fname):
-    conn = d.con_pos(connect)
-    chunks = psql.read_sql(sql=sql,
-                           con=conn,
-                           chunksize=5000)
-    with open(fname, 'w') as f:
-        for r in chunks:
-            r.to_csv(f, sep=',',
-                     header=False,
-                     na_rep='',
-                     index=False)
+<p>その後実際にうん千万件のデータで試した所、<code>pandas.io.sql</code>の<strong>chunksize</strong>は一旦ローカルに全てfetchするという動作でした。(メモリ食い潰してec2が死にました)<br />
+<a href="https://github.com/pandas-dev/pandas/issues/12265">https://github.com/pandas-dev/pandas/issues/12265</a></p>
+
+<p>なので、サーバサイドカーソルを使用してデータの書き出しを行いました。</p>
+
+<pre><code class="language-python">def write_sql_result(sql f):
+    with get_connection() as conn:
+        with conn.cursor('query1') as cur:
+            cur.itersize = 1000
+            cur.execute(sql)
+            with gzip.open(f, 'wt') as f:
+                w = csv.writer(f, lineterminator='\n', quoting=csv.QUOTE_ALL)
+                for i in cur:
+                    w.writerow(i)
 </code></pre>
 
-<p>結局、pandas.io.sqlで <strong>chunksize</strong> を設定し、 <em>TextFileReader</em> をforで回しつつcsvへ書き出すようにした。
-その分ディスクIOが断続的に起きますがまぁそこはもうしょうがない<br />
-chunksizeは知見だったので、メモ</p>
+<p>とりあえず、これで大丈夫そう</p>
 
       </div>
     </div>
