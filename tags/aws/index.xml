@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Aws on やるだけやる</title>
+    <link>https://dohq.github.io/tags/aws/</link>
+    <description>Recent content in Aws on やるだけやる</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>dorastone@gmail.com</managingEditor>
+    <webMaster>dorastone@gmail.com</webMaster>
+    <copyright>2017 R.Maejima</copyright>
+    <lastBuildDate>Fri, 19 Jan 2018 14:29:46 +0900</lastBuildDate>
+    
+	<atom:link href="https://dohq.github.io/tags/aws/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>EC2でntpの設定が効かない</title>
+      <link>https://dohq.github.io/posts/set_ec2_ntp/</link>
+      <pubDate>Fri, 19 Jan 2018 14:29:46 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/posts/set_ec2_ntp/</guid>
+      <description>EC2上のLinux(Centos5)でntp時刻同期が出来ない 現行のサービスにて、EC2上でCentOS5のシステムがあります。
+ところが最近このマシンの時刻が早まってきてまして、いろいろと不都合が…
+ntpサービスの導入をしていなかった事から
+「まぁNTPの設定すればええやろ」
+と軽い考えだったのですが、ntpの設定しようがnptdateコマンド打とうが時刻が合ってくれない…
+なんていうことがありましたとさ
+原因 EC2インスタンスはXen環境で動いているようで、 Domain-0 の時刻に引っぱられる ようです。
+なので、カーネルパラメータからこれを無効にすればOKです。
+対策 /etc/sysctl.conf xen.independent_wallclock = 1 &amp;lt;- 追加 sysctl -p  即反映させる場合は、
+echo &#39;1&#39; &amp;gt; /proc/sys/xen/independent_wallclock  これで、ntpdate ntp.nict.jpでok</description>
+    </item>
+    
+    <item>
+      <title>メモリに乗らない量のselect結果をcsvへ書き出す(python)</title>
+      <link>https://dohq.github.io/posts/write_huge_csv_for_py/</link>
+      <pubDate>Wed, 10 Jan 2018 18:27:24 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/posts/write_huge_csv_for_py/</guid>
+      <description>数百GBデータでもcsvに書き出したい！ 業務用のツールを作成する際、 DBのselect結果をcsvへ書き出したい
+という要望は結構あるかと思います。
+でもって適当にcur作ってfetchallしてcsv.writerってやるんですがselect結果がうん千万件とかになるとfetchallした瞬間にメモリを食い潰していきます。
+気がついたらインスタンスが死んでたということもしばしば(当社比)
+どーしたか ※2018-10-07 update 結局、pandas.io.sqlで chunksize を設定し、 TextFileReader をforで回しつつcsvへ書き出すようにした。
+その分ディスクIOが断続的に起きますがまぁそこはもうしょうがない
+chunksizeは知見だったので、メモ
+その後実際にうん千万件のデータで試した所、pandas.io.sqlのchunksizeは一旦ローカルに全てfetchするという動作でした。(メモリ食い潰してec2が死にました)
+https://github.com/pandas-dev/pandas/issues/12265
+なので、サーバサイドカーソルを使用してデータの書き出しを行いました。
+def write_sql_result(sql f): with get_connection() as conn: with conn.cursor(&#39;query1&#39;) as cur: cur.itersize = 1000 cur.execute(sql) with gzip.open(f, &#39;wt&#39;) as f: w = csv.writer(f, lineterminator=&#39;\n&#39;, quoting=csv.QUOTE_ALL) for i in cur: w.writerow(i)  とりあえず、これで大丈夫そう</description>
+    </item>
+    
+  </channel>
+</rss>

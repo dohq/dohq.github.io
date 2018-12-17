@@ -33,11 +33,20 @@
     </item>
     
     <item>
-      <title>Archlinux</title>
-      <link>https://dohq.github.io/tags/archlinux/</link>
-      <pubDate>Wed, 03 Jan 2018 03:08:22 +0900</pubDate>
+      <title>Aws</title>
+      <link>https://dohq.github.io/tags/aws/</link>
+      <pubDate>Fri, 19 Jan 2018 14:29:46 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/tags/archlinux/</guid>
+      <guid>https://dohq.github.io/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Ec2</title>
+      <link>https://dohq.github.io/tags/ec2/</link>
+      <pubDate>Fri, 19 Jan 2018 14:29:46 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/tags/ec2/</guid>
       <description></description>
     </item>
     
@@ -60,6 +69,15 @@
     </item>
     
     <item>
+      <title>Ntp</title>
+      <link>https://dohq.github.io/tags/ntp/</link>
+      <pubDate>Fri, 19 Jan 2018 14:29:46 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/tags/ntp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Python</title>
       <link>https://dohq.github.io/tags/python/</link>
       <pubDate>Wed, 10 Jan 2018 18:27:24 +0900</pubDate>
@@ -69,11 +87,29 @@
     </item>
     
     <item>
+      <title>Redshift</title>
+      <link>https://dohq.github.io/tags/redshift/</link>
+      <pubDate>Wed, 10 Jan 2018 18:27:24 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/tags/redshift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Vim</title>
       <link>https://dohq.github.io/tags/vim/</link>
       <pubDate>Mon, 17 Dec 2018 10:23:00 +0900</pubDate>
       <author>dorastone@gmail.com</author>
       <guid>https://dohq.github.io/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Vimconf</title>
+      <link>https://dohq.github.io/tags/vimconf/</link>
+      <pubDate>Wed, 08 Nov 2017 11:50:07 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/tags/vimconf/</guid>
       <description></description>
     </item>
     
