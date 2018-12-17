@@ -139,7 +139,7 @@ vim-mode-plus: The most ambitious vim emulator in the world (t9md) VisualStudioC
     <item>
       <title>ArchLinuxでMokeeをビルドする</title>
       <link>https://dohq.github.io/posts/mokee/</link>
-      <pubDate>Wed, 11 Jan 2017 02:09:46 +0000</pubDate>
+      <pubDate>Wed, 11 Jan 2017 02:09:46 +0900</pubDate>
       <author>dorastone@gmail.com</author>
       <guid>https://dohq.github.io/posts/mokee/</guid>
       <description>自分メモ Mokee(MM)のビルド Xiaomi Mi5(gemini)のMokeeをビルドしたのでそのメモ 尚、対象デバイスはgemini(Xiaomi Mi5)とする。

@@ -95,11 +95,11 @@ vboxファイルの HardDisk セクションに上記UUIDで置換
       <pubDate>Sun, 12 Nov 2017 18:23:58 +0900</pubDate>
       <author>dorastone@gmail.com</author>
       <guid>https://dohq.github.io/about/</guid>
-      <description> Name 前島竜太郎
-Age 27
+      <description> Name dohq
+Age 28
 Gender 男性
-Job 駆け出しエンジニア、やってます
-Skill  Linuxを用いたシステム構築が得意です  RHEL CentOS SUSE Linux AIX Solaris  運用バッチを書いてます  bash ksh perl python (最近好んで触るようになりました) java c  Gitとか一通り触れます  Git SVN docker vagrant chef  ほかに出来る事  AWSで小規模ネットワークくらいなら立てれます 在職中の会社ホームページを管理してます VimVimしてます   </description>
+Job 201605~ 決済系サービス 201404~ 小規模SIer 201205~ 医療系SIer 201004~ サーバメーカー フィールドエンジニア
+Skill  Platform  OS RHEL SUSE Enterprise HP-UX AIX  Program  bat bash csh Windows bat Python golang c   </description>
     </item>
     
     <item>
@@ -152,7 +152,7 @@ vim-mode-plus: The most ambitious vim emulator in the world (t9md) VisualStudioC
     <item>
       <title>ArchLinuxでMokeeをビルドする</title>
       <link>https://dohq.github.io/posts/mokee/</link>
-      <pubDate>Wed, 11 Jan 2017 02:09:46 +0000</pubDate>
+      <pubDate>Wed, 11 Jan 2017 02:09:46 +0900</pubDate>
       <author>dorastone@gmail.com</author>
       <guid>https://dohq.github.io/posts/mokee/</guid>
       <description>自分メモ Mokee(MM)のビルド Xiaomi Mi5(gemini)のMokeeをビルドしたのでそのメモ 尚、対象デバイスはgemini(Xiaomi Mi5)とする。
