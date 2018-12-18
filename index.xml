@@ -29,12 +29,12 @@ msvc(VisualStudio)でビルドします。
 今回使用した環境  Windows10 快適なネット接続環境  また、ビルドに使うマシンのスペックについてはVisualStudio 2017 CommunityEditionの システム要件に則ります。
 てじゅーん 今回は D:\build-vim 以下にビルドに必要なものを放り込みます。
 必要なものインストール VS2017CE 今回はコミュニティエディションを使います。
- Microsoftのダウンロードページから コミュニティ をダウンロードして実行 Nextを連打していくとインストールするコンポーネントを選択する画面が出るので、以下のコンポーネントを選択  「ワークロード」タブの「C++ によるデスクトップ開発」   Python3 既に純正PythonやAnacondaをインストールして使ってる人は特に追加で必要なものはありません。 初めてです！という人は以下のPythonをインストールして下さい * ダウンロードページから Windows x86-64 executable installer をインストールして下さい
-※ embededdableはvimのコンパイルに必要なヘッダファイルなどが無いので今回は使えません。
+ Microsoftのダウンロードページから コミュニティ をダウンロードして実行 Nextを連打していくとインストールするコンポーネントを選択する画面が出るので、以下のコンポーネントを選択  「ワークロード」タブの「C++ によるデスクトップ開発」   Python3 既に純正PythonやAnacondaをインストールして使ってる人は特に追加で必要なものはありません。 初めてです！という人は以下のPythonをインストールして下さい
+ ダウンロードページから Windows x86-64 executable installer をインストールして下さい  ※ embededdableはvimのコンパイルに必要なヘッダファイルなどが無いので今回は使えません。
 vim 現在vimはgithub上で開発が進められているので、git cloneすればおk
 https://github.com/vim/vim D:\build-vim\vim
 ビルドする 毎回ビルドコマンド打つのもつらいので、今回はビルド用のbatファイルを作っておきます。
-@echo off set PATH=%SystemRoot% set PATH=%PATH%;%SystemRoot%\System32 set INCLUDE= set LIBPATH= @call &amp;quot;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.bat&amp;quot; amd64 set PY3= PYTHON3=&amp;quot;&amp;lt;&amp;lt;Python3インストール先ディレクトリ&amp;gt;&amp;gt;&amp;quot; PYTHON3_VER=36 DYNAMIC_PYTHON3=yes PYTHONThREEDLL=&amp;lt;&amp;lt;Python3インストール先ディレクトリ&amp;gt;&amp;gt;python36.</description>
+@echo off set PATH=%SystemRoot% set PATH=%PATH%;%SystemRoot%\System32 set INCLUDE= set LIBPATH= @call &amp;quot;C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Auxiliary\Build\vcvarsall.</description>
     </item>
     
     <item>
