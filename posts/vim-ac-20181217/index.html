@@ -452,7 +452,7 @@ msvc(VisualStudio)でビルドします。<br />
 
 <p>現在vimはgithub上で開発が進められているので、git cloneすればおk</p>
 
-<p><code>https://github.com/vim/vim D:\build-vim\vim</code></p>
+<p><code>git clone https://github.com/vim/vim D:\build-vim\vim</code></p>
 
 <h3 id="ビルドする">ビルドする</h3>
 
@@ -478,7 +478,6 @@ rmdir /s /q ObjCULYHAMD64 ObjGXULYHAMD64
 nmake -f Make_mvc.mak clean
 nmake -f Make_mvc.mak %OPT% %OPT2% GUI=no
 nmake -f Make_mvc.mak %OPT% %OPT2% GUI=yes DIRECTX=yes
-pushd D:\build-vim
 </code></pre>
 
 <p>Python3インストール先ディレクトリを変更して下さい。<br />
@@ -491,8 +490,8 @@ pushd D:\build-vim
 <p>vimは実行ファイルの他にもいくつか必要なファイルがあるため、それを配置します。<br />
 今回は <code>C:\vim</code> への配置を例にしてみます。</p>
 
-<pre><code class="language-dos">pushd D:\build-vim\vim\
-XCOPY /D /S /R /Y /I D:\build-vim\vim\runtime\* C:\vim\vim81\
+<pre><code class="language-dos">XCOPY /D /S /R /Y /I D:\build-vim\vim\runtime\* C:\vim\vim81\
+pushd D:\build-vim\vim\
 move src\*.exe C:\vim\
 COPY vimtutor* C:\vim\
 </code></pre>
@@ -520,13 +519,12 @@ set OPT=CPU=AMD64 FEATURES=HUGE USE_MSVCRT=yes MAP=no IME=yes MBYTE=yes ICONV=ye
 set OPT2=%PY3%
 
 pushd D:\build-vim\vim\src
-rmdir /s /q ObjCULYHAMD64 ObjGXULYHAMD64
 nmake -f Make_mvc.mak clean
 nmake -f Make_mvc.mak %OPT% %OPT2% GUI=no
 nmake -f Make_mvc.mak %OPT% %OPT2% GUI=yes DIRECTX=yes
 
 pushd D:\build-vim\vim\
-XCOPY /D /S /R /Y /I D:\build-vim\vim\runtime\* C:\vim\vim81\
+XCOPY /D /S /R /Y /I runtime\* C:\vim\vim81\
 move src\*.exe C:\vim\
 COPY vimtutor* C:\vim\
 </code></pre>
