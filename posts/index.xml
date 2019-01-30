@@ -9,10 +9,20 @@
     <managingEditor>dorastone@gmail.com</managingEditor>
     <webMaster>dorastone@gmail.com</webMaster>
     <copyright>2017 R.Maejima</copyright>
-    <lastBuildDate>Mon, 17 Dec 2018 10:23:00 +0900</lastBuildDate>
+    <lastBuildDate>Fri, 25 Jan 2019 09:46:03 +0900</lastBuildDate>
     
 	<atom:link href="https://dohq.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>SSHポートフォワーディングを多段で行う</title>
+      <link>https://dohq.github.io/posts/ssh-tunnel-via-multiple-hops/</link>
+      <pubDate>Fri, 25 Jan 2019 09:46:03 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/posts/ssh-tunnel-via-multiple-hops/</guid>
+      <description>なんで 外出先から自宅にあるESXiのWEB管理画面が見たいとか…ニッチすぎるか
+図 ┌────────┐ ┌──────┐ ┌──────┐ ┌──────────┐ │手元のPC│ │踏み台│ │自宅PC│ │自宅サーバ│ └───┬────┘ └──┬───┘ └──┬───┘ └────┬─────┘ │ ポート8080(なんでもいい)│ │ │ │ ────────────────────────&amp;gt; │ │ │ │ │ │ │ │ ポート44444(なんでもいい)│ │ │ │ ─────────────────────────&amp;gt; │ │ │ │ │ │ │ │ ポート443 │ │ │ │ ──────────────────&amp;gt; ┌───┴────┐ ┌──┴───┐ ┌──┴───┐ ┌────┴─────┐ │手元のPC│ │踏み台│ │自宅PC│ │自宅サーバ│ └────────┘ └──────┘ └──────┘ └──────────┘  結論 基本的には普通のポートフォワードコマンドに則る 例として 手元のPC: localhost 踏み台: bastion 自宅PC: home 自宅サーバ: server で繋げられるものとする</description>
+    </item>
     
     <item>
       <title>Vim AdventCalendar 17日目</title>
@@ -39,10 +49,10 @@ git clone https://github.com/vim/vim D:\build-vim\vim
     
     <item>
       <title>EC2でntpの設定が効かない</title>
-      <link>https://dohq.github.io/posts/set_ec2_ntp/</link>
+      <link>https://dohq.github.io/posts/set-ec2-ntp/</link>
       <pubDate>Fri, 19 Jan 2018 14:29:46 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/set_ec2_ntp/</guid>
+      <guid>https://dohq.github.io/posts/set-ec2-ntp/</guid>
       <description>EC2上のLinux(Centos5)でntp時刻同期が出来ない 現行のサービスにて、EC2上でCentOS5のシステムがあります。
 ところが最近このマシンの時刻が早まってきてまして、いろいろと不都合が…
 ntpサービスの導入をしていなかった事から
@@ -57,10 +67,10 @@ echo &#39;1&#39; &amp;gt; /proc/sys/xen/independent_wallclock  これで、ntpda
     
     <item>
       <title>メモリに乗らない量のselect結果をcsvへ書き出す(python)</title>
-      <link>https://dohq.github.io/posts/write_huge_csv_for_py/</link>
+      <link>https://dohq.github.io/posts/write-huge-csv-for-py/</link>
       <pubDate>Wed, 10 Jan 2018 18:27:24 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/write_huge_csv_for_py/</guid>
+      <guid>https://dohq.github.io/posts/write-huge-csv-for-py/</guid>
       <description>数百GBデータでもcsvに書き出したい！ 業務用のツールを作成する際、 DBのselect結果をcsvへ書き出したい
 という要望は結構あるかと思います。
 でもって適当にcur作ってfetchallしてcsv.writerってやるんですがselect結果がうん千万件とかになるとfetchallした瞬間にメモリを食い潰していきます。

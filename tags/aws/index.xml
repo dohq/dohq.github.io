@@ -16,10 +16,10 @@
     
     <item>
       <title>EC2でntpの設定が効かない</title>
-      <link>https://dohq.github.io/posts/set_ec2_ntp/</link>
+      <link>https://dohq.github.io/posts/set-ec2-ntp/</link>
       <pubDate>Fri, 19 Jan 2018 14:29:46 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/set_ec2_ntp/</guid>
+      <guid>https://dohq.github.io/posts/set-ec2-ntp/</guid>
       <description>EC2上のLinux(Centos5)でntp時刻同期が出来ない 現行のサービスにて、EC2上でCentOS5のシステムがあります。
 ところが最近このマシンの時刻が早まってきてまして、いろいろと不都合が…
 ntpサービスの導入をしていなかった事から
@@ -34,10 +34,10 @@ echo &#39;1&#39; &amp;gt; /proc/sys/xen/independent_wallclock  これで、ntpda
     
     <item>
       <title>メモリに乗らない量のselect結果をcsvへ書き出す(python)</title>
-      <link>https://dohq.github.io/posts/write_huge_csv_for_py/</link>
+      <link>https://dohq.github.io/posts/write-huge-csv-for-py/</link>
       <pubDate>Wed, 10 Jan 2018 18:27:24 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/write_huge_csv_for_py/</guid>
+      <guid>https://dohq.github.io/posts/write-huge-csv-for-py/</guid>
       <description>数百GBデータでもcsvに書き出したい！ 業務用のツールを作成する際、 DBのselect結果をcsvへ書き出したい
 という要望は結構あるかと思います。
 でもって適当にcur作ってfetchallしてcsv.writerってやるんですがselect結果がうん千万件とかになるとfetchallした瞬間にメモリを食い潰していきます。

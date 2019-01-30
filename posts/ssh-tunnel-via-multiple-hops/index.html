@@ -3,8 +3,8 @@
 <head>
   
   <meta charset="utf-8">
-  <title>Tips</title>
-  <meta name="description" content="Tips">
+  <title>SSHポートフォワーディングを多段で行う</title>
+  <meta name="description" content="SSHポートフォワーディングを多段で行う">
   <meta name="author" content="">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -336,8 +336,6 @@ body {
 
   
   
-  <link href="https://dohq.github.io/categories/tips/index.xml" rel="alternate" type="application/rss+xml" title="やるだけやる Feed" />
-  
 
   <meta name="generator" content="Hugo 0.53" />
   
@@ -373,95 +371,78 @@ body {
 </div>
 
 
-
 <div class="pure-g">
   <div class="pure-u-1-24 pure-u-md-1-6"></div>
   <div class="pure-u-11-12 pure-u-md-2-3">
-    <div class="post-content">
-      <p class="posts-name">Tips:</p>
+    <div class="post">
 
-      <ul class="posts">
+      <div class="post-title">
+        <p class="footnote">
+        <time class="">01-25-2019</time>
         
         
+        |
         
-        <li>
-          
-          <a class="post-list" href="https://dohq.github.io/posts/ssh-tunnel-via-multiple-hops/">SSHポートフォワーディングを多段で行う</a>
+        
+        tags: [ <a href="https://dohq.github.io/tags/linux">linux</a> <a href="https://dohq.github.io/tags/ssh">ssh</a> ]
+        
 
-          <p class="footnote">
-          <time datetime="01-25-2019">
-            01-25-2019
-          </time>
-          </p>
-        </li>
         
+        categories: [<a href="https://dohq.github.io/categories/tips">tips</a> ]
         
-        
-        <li>
-          
-          <a class="post-list" href="https://dohq.github.io/posts/vim-ac-20181217/">Vim AdventCalendar 17日目</a>
 
-          <p class="footnote">
-          <time datetime="12-17-2018">
-            12-17-2018
-          </time>
-          </p>
-        </li>
         
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://dohq.github.io/posts/set-ec2-ntp/">EC2でntpの設定が効かない</a>
+        </p>
+        <h1>SSHポートフォワーディングを多段で行う</h1>
+      </div>
 
-          <p class="footnote">
-          <time datetime="01-19-2018">
-            01-19-2018
-          </time>
-          </p>
-        </li>
+      <div class="post-content">
         
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://dohq.github.io/posts/write-huge-csv-for-py/">メモリに乗らない量のselect結果をcsvへ書き出す(python)</a>
 
-          <p class="footnote">
-          <time datetime="01-10-2018">
-            01-10-2018
-          </time>
-          </p>
-        </li>
-        
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://dohq.github.io/posts/move-virtualmachine-dir/">VirtualMachineディレクトリを移動する</a>
+<h1 id="なんで">なんで</h1>
 
-          <p class="footnote">
-          <time datetime="01-03-2018">
-            01-03-2018
-          </time>
-          </p>
-        </li>
-        
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://dohq.github.io/posts/mokee/">ArchLinuxでMokeeをビルドする</a>
+<p>外出先から自宅にあるESXiのWEB管理画面が見たいとか…ニッチすぎるか</p>
 
-          <p class="footnote">
-          <time datetime="01-11-2017">
-            01-11-2017
-          </time>
-          </p>
-        </li>
-        
-        
-      </ul>
+<h2 id="図">図</h2>
+
+<pre><code>┌────────┐                 ┌──────┐                   ┌──────┐          ┌──────────┐
+│手元のPC│                 │踏み台│                   │自宅PC│          │自宅サーバ│
+└───┬────┘                 └──┬───┘                   └──┬───┘          └────┬─────┘
+    │ ポート8080(なんでもいい)│                          │                   │
+    │ ────────────────────────&gt;                          │                   │
+    │                         │                          │                   │
+    │                         │ ポート44444(なんでもいい)│                   │
+    │                         │ ─────────────────────────&gt;                   │
+    │                         │                          │                   │
+    │                         │                          │     ポート443     │
+    │                         │                          │ ──────────────────&gt;
+┌───┴────┐                 ┌──┴───┐                   ┌──┴───┐          ┌────┴─────┐
+│手元のPC│                 │踏み台│                   │自宅PC│          │自宅サーバ│
+└────────┘                 └──────┘                   └──────┘          └──────────┘
+</code></pre>
+
+<h2 id="結論">結論</h2>
+
+<p>基本的には普通のポートフォワードコマンドに則る
+例として
+手元のPC: localhost
+踏み台: bastion
+自宅PC: home
+自宅サーバ: server
+で繋げられるものとする</p>
+
+<p><code>ssh -L 8080:localhost:44444 bastion ssh -4 -L 44444:server:443 home</code></p>
+
+<p>これで <code>https://127.0.0.1/</code> にてESXiの管理画面にアクセス出来るはず。<br />
+ちょっと困ったのが</p>
+
+<pre><code>bind [::1]:44444: Cannot assign requested address
+</code></pre>
+
+<p>のエラーが出た時。
+ipv6がONになってる鯖を踏み台にした際に起きるっぽいので <code>-4</code> オプションでipv4のみ使用するようにした。</p>
+
+      </div>
     </div>
   </div>
   <div class="pure-u-1-24 pure-u-md-1-6"></div>
@@ -495,7 +476,7 @@ body {
 
         </ul>
         <a href="#" class="pure-menu-link pull-right" id="gototop-btn">↑↑</a>
-        <a href="https://dohq.github.io/categories/tips/index.xml" class="pure-menu-link pull-right">RSS</a>
+        <a href="" class="pure-menu-link pull-right">RSS</a>
       </div>
       
       <p id="foot-copyright">2017 R.Maejima</p>

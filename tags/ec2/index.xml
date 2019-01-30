@@ -16,10 +16,10 @@
     
     <item>
       <title>EC2でntpの設定が効かない</title>
-      <link>https://dohq.github.io/posts/set_ec2_ntp/</link>
+      <link>https://dohq.github.io/posts/set-ec2-ntp/</link>
       <pubDate>Fri, 19 Jan 2018 14:29:46 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/set_ec2_ntp/</guid>
+      <guid>https://dohq.github.io/posts/set-ec2-ntp/</guid>
       <description>EC2上のLinux(Centos5)でntp時刻同期が出来ない 現行のサービスにて、EC2上でCentOS5のシステムがあります。
 ところが最近このマシンの時刻が早まってきてまして、いろいろと不都合が…
 ntpサービスの導入をしていなかった事から

@@ -3,17 +3,22 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://dohq.github.io/posts/ssh-tunnel-via-multiple-hops/</loc>
+    <lastmod>2019-01-25T09:46:03+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://dohq.github.io/posts/vim-ac-20181217/</loc>
     <lastmod>2018-12-17T10:23:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/posts/set_ec2_ntp/</loc>
+    <loc>https://dohq.github.io/posts/set-ec2-ntp/</loc>
     <lastmod>2018-01-19T14:29:46+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/posts/write_huge_csv_for_py/</loc>
+    <loc>https://dohq.github.io/posts/write-huge-csv-for-py/</loc>
     <lastmod>2018-01-10T18:27:24+09:00</lastmod>
   </url>
   
@@ -79,6 +84,12 @@
   </url>
   
   <url>
+    <loc>https://dohq.github.io/tags/linux/</loc>
+    <lastmod>2019-01-25T09:46:03+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://dohq.github.io/tags/mokee/</loc>
     <lastmod>2017-01-11T02:09:46+09:00</lastmod>
     <priority>0</priority>
@@ -92,7 +103,7 @@
   
   <url>
     <loc>https://dohq.github.io/posts/</loc>
-    <lastmod>2018-12-17T10:23:00+09:00</lastmod>
+    <lastmod>2019-01-25T09:46:03+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -109,6 +120,12 @@
   </url>
   
   <url>
+    <loc>https://dohq.github.io/tags/ssh/</loc>
+    <lastmod>2019-01-25T09:46:03+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://dohq.github.io/tags/</loc>
     <lastmod>2018-12-17T10:23:00+09:00</lastmod>
     <priority>0</priority>
@@ -116,7 +133,7 @@
   
   <url>
     <loc>https://dohq.github.io/categories/tips/</loc>
-    <lastmod>2018-12-17T10:23:00+09:00</lastmod>
+    <lastmod>2019-01-25T09:46:03+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -140,7 +157,7 @@
   
   <url>
     <loc>https://dohq.github.io/</loc>
-    <lastmod>2018-12-17T10:23:00+09:00</lastmod>
+    <lastmod>2019-01-25T09:46:03+09:00</lastmod>
     <priority>0</priority>
   </url>
   
