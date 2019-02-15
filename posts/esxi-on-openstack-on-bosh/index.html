@@ -3,8 +3,8 @@
 <head>
   
   <meta charset="utf-8">
-  <title>Tips</title>
-  <meta name="description" content="Tips">
+  <title>ESXi on OpenStack on BOSHでの注意</title>
+  <meta name="description" content="ESXi on OpenStack on BOSHでの注意">
   <meta name="author" content="">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -336,8 +336,6 @@ body {
 
   
   
-  <link href="https://dohq.github.io/categories/tips/index.xml" rel="alternate" type="application/rss+xml" title="やるだけやる Feed" />
-  
 
   <meta name="generator" content="Hugo 0.54.0" />
   
@@ -373,108 +371,115 @@ body {
 </div>
 
 
-
 <div class="pure-g">
   <div class="pure-u-1-24 pure-u-md-1-6"></div>
   <div class="pure-u-11-12 pure-u-md-2-3">
-    <div class="post-content">
-      <p class="posts-name">Tips:</p>
+    <div class="post">
 
-      <ul class="posts">
+      <div class="post-title">
+        <p class="footnote">
+        <time class="">02-16-2019</time>
         
         
+        |
         
-        <li>
-          
-          <a class="post-list" href="https://dohq.github.io/posts/esxi-on-openstack-on-bosh/">ESXi on OpenStack on BOSHでの注意</a>
+        
+        tags: [ <a href="https://dohq.github.io/tags/bosh">bosh</a> <a href="https://dohq.github.io/tags/openstack">openstack</a> ]
+        
 
-          <p class="footnote">
-          <time datetime="02-16-2019">
-            02-16-2019
-          </time>
-          </p>
-        </li>
         
+        categories: [<a href="https://dohq.github.io/categories/tips">tips</a> ]
         
-        
-        <li>
-          
-          <a class="post-list" href="https://dohq.github.io/posts/ssh-tunnel-via-multiple-hops/">SSHポートフォワーディングを多段で行う</a>
 
-          <p class="footnote">
-          <time datetime="01-25-2019">
-            01-25-2019
-          </time>
-          </p>
-        </li>
         
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://dohq.github.io/posts/vim-ac-20181217/">Vim AdventCalendar 17日目</a>
+        </p>
+        <h1>ESXi on OpenStack on BOSHでの注意</h1>
+      </div>
 
-          <p class="footnote">
-          <time datetime="12-17-2018">
-            12-17-2018
-          </time>
-          </p>
-        </li>
+      <div class="post-content">
         
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://dohq.github.io/posts/set-ec2-ntp/">EC2でntpの設定が効かない</a>
 
-          <p class="footnote">
-          <time datetime="01-19-2018">
-            01-19-2018
-          </time>
-          </p>
-        </li>
-        
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://dohq.github.io/posts/write-huge-csv-for-py/">メモリに乗らない量のselect結果をcsvへ書き出す(python)</a>
+<p>OpenStackのインストールからは書ける気がしないので割愛<br />
+主に設定についての部分だけ抜粋<br />
+ちなみにOpenStackはESXi上に<a href="https://www.mirantis.com/software/openstack/download/">Mirantis OpenStack</a>で<br />
+Controller/Compute・Cinder/Kibana・Grafanaプラグイン<br />
+の3台構成</p>
 
-          <p class="footnote">
-          <time datetime="01-10-2018">
-            01-10-2018
-          </time>
-          </p>
-        </li>
-        
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://dohq.github.io/posts/move-virtualmachine-dir/">VirtualMachineディレクトリを移動する</a>
+<h2 id="esxi-on-openstackでvmが起動しない">ESXi on OpenstackでVMが起動しない</h2>
 
-          <p class="footnote">
-          <time datetime="01-03-2018">
-            01-03-2018
-          </time>
-          </p>
-        </li>
-        
-        
-        
-        <li>
-          
-          <a class="post-list" href="https://dohq.github.io/posts/mokee/">ArchLinuxでMokeeをビルドする</a>
+<p>ESXi本体の設定ファイル更新(要SSHログイン)</p>
 
-          <p class="footnote">
-          <time datetime="01-11-2017">
-            01-11-2017
-          </time>
-          </p>
-        </li>
-        
-        
-      </ul>
+<pre><code class="language-diff">vi /etc/vmware/config
+
++ vhv.enable = &quot;TRUE&quot;
+
+/etc/init.d/hostd restart
+</code></pre>
+
+<h2 id="openstack上のvmが鬼のように遅い">OpenStack上のVMが鬼のように遅い</h2>
+
+<p>BOSHのデプロイだけで4時間とかうせやろ…と思ったが、<br />
+ここはOpenStackのバージョンとか導入方法によって変わるのかな…<br />
+(packstackでnewtonインストールした時はそんな事なかったはず)<br />
+どうやら(少なくともMOS9.2は)仮想化方法の初期設定はqemuを使うっぽい…<br />
+なのでkvmに設定してあげればおk<br />
+MOSだとGUIからEnvitonment-&gt;Settings-&gt;Computeで変更出来る<br />
+<em>nova.conf</em> を書き換える場合、</p>
+
+<pre><code class="language-diff">[libvirt]
+- virt_type=qume
++ virt_type=kvm
++ hw_machine_type = &quot;x86_64=pc-i440fx-trusty,i686=pc-i440fx-trusty&quot;
+</code></pre>
+
+<p>で大丈夫そう。<br />
+<strong>hw_machine_type</strong> についてはアーキテクチャとOSを<br />
+<code>virsh capabilitie</code><br />
+の出力から探すとよさそう。</p>
+
+<h2 id="openstack上のvolume削除が鬼のように-ry">OpenStack上のVolume削除が鬼のように(ry</h2>
+
+<p>やっとこさ作ったBOSH環境をなんかのアレで消して作りなおしたい時に
+<code>bosh delete-env ...</code><br />
+とやる訳なんですがvolumeの削除に時間がかかり過ぎて…</p>
+
+<pre><code>...
+
+  Deleting disk 'a383dda4-76ce-4928-ac57-1a5e17d5e7e7'... Failed (00:05:07)
+Failed deleting deployment (00:05:43)
+
+Stopping registry... Finished (00:00:00)
+Cleaning up rendered CPI jobs... Finished (00:00:00)
+
+Deleting deployment:
+  Deleting disk in the cloud:
+    CPI 'delete_disk' method responded with error: CmdError{&quot;type&quot;:&quot;Bosh::Clouds::CloudError&quot;,&quot;message&quot;:&quot;Timed out waiting for Volume `a383dda4-76ce-4928-ac57-1a5e17d5e7e7' to be deleted&quot;,&quot;ok_to_retry&quot;:false}
+
+Exit code 1
+</code></pre>
+
+<p><em>んあ゛あ゛あ゛ぁああ</em> てなもんですよ。<br />
+実はOpenStackではVolumeの削除時にデフォルトで <strong>zero overwrite(volumeをzeroで全て上書く)</strong> するらしい。<br />
+なので65Gのvolume消すのに3時間もかかる。<br />
+これも <em>cinder.conf</em> を書き換える。</p>
+
+<pre><code class="language-diff">vi /etc/cinder/cinder.conf
+
+[LVM-backend]
++ volume_clear=none
++ volume_clear_size=0
+
+service cinder-volume restart
+</code></pre>
+
+<p>上の例では <em>[LVM-backend]</em> の下に追記したが、Cinderで使用しているバックエンドの配下に設定を入れる必要がある。<br />
+(NFSとかネットワーク越しのディスクだとトラフィックやばそうだけどどうなんだろ…)</p>
+
+<h3 id="まとめ">まとめ</h3>
+
+<p>OpenStackムズカシイ</p>
+
+      </div>
     </div>
   </div>
   <div class="pure-u-1-24 pure-u-md-1-6"></div>
@@ -508,7 +513,7 @@ body {
 
         </ul>
         <a href="#" class="pure-menu-link pull-right" id="gototop-btn">↑↑</a>
-        <a href="https://dohq.github.io/categories/tips/index.xml" class="pure-menu-link pull-right">RSS</a>
+        <a href="" class="pure-menu-link pull-right">RSS</a>
       </div>
       
       <p id="foot-copyright">2017 R.Maejima</p>

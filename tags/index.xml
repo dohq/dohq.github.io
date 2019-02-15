@@ -42,6 +42,15 @@
     </item>
     
     <item>
+      <title>Bosh</title>
+      <link>https://dohq.github.io/tags/bosh/</link>
+      <pubDate>Sat, 16 Feb 2019 00:42:31 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/tags/bosh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Ec2</title>
       <link>https://dohq.github.io/tags/ec2/</link>
       <pubDate>Fri, 19 Jan 2018 14:29:46 +0900</pubDate>
@@ -83,6 +92,15 @@
       <pubDate>Fri, 19 Jan 2018 14:29:46 +0900</pubDate>
       <author>dorastone@gmail.com</author>
       <guid>https://dohq.github.io/tags/ntp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Openstack</title>
+      <link>https://dohq.github.io/tags/openstack/</link>
+      <pubDate>Sat, 16 Feb 2019 00:42:31 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/tags/openstack/</guid>
       <description></description>
     </item>
     

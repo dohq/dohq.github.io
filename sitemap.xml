@@ -3,6 +3,11 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>https://dohq.github.io/posts/esxi-on-openstack-on-bosh/</loc>
+    <lastmod>2019-02-16T00:42:31+09:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://dohq.github.io/posts/ssh-tunnel-via-multiple-hops/</loc>
     <lastmod>2019-01-25T09:46:03+09:00</lastmod>
   </url>
@@ -61,6 +66,12 @@
   </url>
   
   <url>
+    <loc>https://dohq.github.io/tags/bosh/</loc>
+    <lastmod>2019-02-16T00:42:31+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://dohq.github.io/categories/</loc>
     <priority>0</priority>
   </url>
@@ -102,8 +113,14 @@
   </url>
   
   <url>
+    <loc>https://dohq.github.io/tags/openstack/</loc>
+    <lastmod>2019-02-16T00:42:31+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
     <loc>https://dohq.github.io/posts/</loc>
-    <lastmod>2019-01-25T09:46:03+09:00</lastmod>
+    <lastmod>2019-02-16T00:42:31+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -133,7 +150,7 @@
   
   <url>
     <loc>https://dohq.github.io/categories/tips/</loc>
-    <lastmod>2019-01-25T09:46:03+09:00</lastmod>
+    <lastmod>2019-02-16T00:42:31+09:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -157,7 +174,7 @@
   
   <url>
     <loc>https://dohq.github.io/</loc>
-    <lastmod>2019-01-25T09:46:03+09:00</lastmod>
+    <lastmod>2019-02-16T00:42:31+09:00</lastmod>
     <priority>0</priority>
   </url>
   

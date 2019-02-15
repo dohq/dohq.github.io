@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Bosh on やるだけやる</title>
+    <link>https://dohq.github.io/tags/bosh/</link>
+    <description>Recent content in Bosh on やるだけやる</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <managingEditor>dorastone@gmail.com</managingEditor>
+    <webMaster>dorastone@gmail.com</webMaster>
+    <copyright>2017 R.Maejima</copyright>
+    <lastBuildDate>Sat, 16 Feb 2019 00:42:31 +0900</lastBuildDate>
+    
+	<atom:link href="https://dohq.github.io/tags/bosh/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>ESXi on OpenStack on BOSHでの注意</title>
+      <link>https://dohq.github.io/posts/esxi-on-openstack-on-bosh/</link>
+      <pubDate>Sat, 16 Feb 2019 00:42:31 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/posts/esxi-on-openstack-on-bosh/</guid>
+      <description>OpenStackのインストールからは書ける気がしないので割愛
+主に設定についての部分だけ抜粋
+ちなみにOpenStackはESXi上にMirantis OpenStackで
+Controller/Compute・Cinder/Kibana・Grafanaプラグイン
+の3台構成
+ESXi on OpenstackでVMが起動しない ESXi本体の設定ファイル更新(要SSHログイン)
+vi /etc/vmware/config + vhv.enable = &amp;quot;TRUE&amp;quot; /etc/init.d/hostd restart  OpenStack上のVMが鬼のように遅い BOSHのデプロイだけで4時間とかうせやろ…と思ったが、
+ここはOpenStackのバージョンとか導入方法によって変わるのかな…
+(packstackでnewtonインストールした時はそんな事なかったはず)
+どうやら(少なくともMOS9.2は)仮想化方法の初期設定はqemuを使うっぽい…
+なのでkvmに設定してあげればおk
+MOSだとGUIからEnvitonment-&amp;gt;Settings-&amp;gt;Computeで変更出来る
+nova.conf を書き換える場合、
+[libvirt] - virt_type=qume + virt_type=kvm + hw_machine_type = &amp;quot;x86_64=pc-i440fx-trusty,i686=pc-i440fx-trusty&amp;quot;  で大丈夫そう。
+hw_machine_type についてはアーキテクチャとOSを
+virsh capabilitie
+の出力から探すとよさそう。
+OpenStack上のVolume削除が鬼のように(ry やっとこさ作ったBOSH環境をなんかのアレで消して作りなおしたい時に bosh delete-env ...
+とやる訳なんですがvolumeの削除に時間がかかり過ぎて…
+... Deleting disk &#39;a383dda4-76ce-4928-ac57-1a5e17d5e7e7&#39;... Failed (00:05:07) Failed deleting deployment (00:05:43) Stopping registry... Finished (00:00:00) Cleaning up rendered CPI jobs... Finished (00:00:00) Deleting deployment: Deleting disk in the cloud: CPI &#39;delete_disk&#39; method responded with error: CmdError{&amp;quot;type&amp;quot;:&amp;quot;Bosh::Clouds::CloudError&amp;quot;,&amp;quot;message&amp;quot;:&amp;quot;Timed out waiting for Volume `a383dda4-76ce-4928-ac57-1a5e17d5e7e7&#39; to be deleted&amp;quot;,&amp;quot;ok_to_retry&amp;quot;:false} Exit code 1  んあ゛あ゛あ゛ぁああ てなもんですよ。</description>
+    </item>
+    
+  </channel>
+</rss>
