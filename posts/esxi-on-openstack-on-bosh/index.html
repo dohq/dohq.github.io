@@ -427,7 +427,7 @@ MOSだとGUIからEnvitonment-&gt;Settings-&gt;Computeで変更出来る<br />
 <em>nova.conf</em> を書き換える場合、</p>
 
 <pre><code class="language-diff">[libvirt]
-- virt_type=qume
+- virt_type=qemu
 + virt_type=kvm
 + hw_machine_type = &quot;x86_64=pc-i440fx-trusty,i686=pc-i440fx-trusty&quot;
 </code></pre>
@@ -467,7 +467,6 @@ Exit code 1
 
 [LVM-backend]
 + volume_clear=none
-+ volume_clear_size=0
 
 service cinder-volume restart
 </code></pre>

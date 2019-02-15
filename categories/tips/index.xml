@@ -33,7 +33,7 @@ vi /etc/vmware/config + vhv.enable = &amp;quot;TRUE&amp;quot; /etc/init.d/hostd 
 なのでkvmに設定してあげればおk
 MOSだとGUIからEnvitonment-&amp;gt;Settings-&amp;gt;Computeで変更出来る
 nova.conf を書き換える場合、
-[libvirt] - virt_type=qume + virt_type=kvm + hw_machine_type = &amp;quot;x86_64=pc-i440fx-trusty,i686=pc-i440fx-trusty&amp;quot;  で大丈夫そう。
+[libvirt] - virt_type=qemu + virt_type=kvm + hw_machine_type = &amp;quot;x86_64=pc-i440fx-trusty,i686=pc-i440fx-trusty&amp;quot;  で大丈夫そう。
 hw_machine_type についてはアーキテクチャとOSを
 virsh capabilitie
 の出力から探すとよさそう。
