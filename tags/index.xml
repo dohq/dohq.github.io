@@ -9,40 +9,13 @@
     <managingEditor>dorastone@gmail.com</managingEditor>
     <webMaster>dorastone@gmail.com</webMaster>
     <copyright>2017 R.Maejima</copyright>
-    <lastBuildDate>Mon, 17 Dec 2018 10:23:00 +0900</lastBuildDate>
+    <lastBuildDate>Sat, 16 Feb 2019 00:42:31 +0900</lastBuildDate>
     
 	<atom:link href="https://dohq.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Adventcalendar</title>
-      <link>https://dohq.github.io/tags/adventcalendar/</link>
-      <pubDate>Mon, 17 Dec 2018 10:23:00 +0900</pubDate>
-      <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/tags/adventcalendar/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Android</title>
-      <link>https://dohq.github.io/tags/android/</link>
-      <pubDate>Wed, 11 Jan 2017 02:09:46 +0900</pubDate>
-      <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/tags/android/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Aws</title>
-      <link>https://dohq.github.io/tags/aws/</link>
-      <pubDate>Fri, 19 Jan 2018 14:29:46 +0900</pubDate>
-      <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/tags/aws/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Bosh</title>
+      <title>bosh</title>
       <link>https://dohq.github.io/tags/bosh/</link>
       <pubDate>Sat, 16 Feb 2019 00:42:31 +0900</pubDate>
       <author>dorastone@gmail.com</author>
@@ -51,7 +24,61 @@
     </item>
     
     <item>
-      <title>Ec2</title>
+      <title>openstack</title>
+      <link>https://dohq.github.io/tags/openstack/</link>
+      <pubDate>Sat, 16 Feb 2019 00:42:31 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/tags/openstack/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>linux</title>
+      <link>https://dohq.github.io/tags/linux/</link>
+      <pubDate>Fri, 25 Jan 2019 09:46:03 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/tags/linux/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ssh</title>
+      <link>https://dohq.github.io/tags/ssh/</link>
+      <pubDate>Fri, 25 Jan 2019 09:46:03 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/tags/ssh/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>AdventCalendar</title>
+      <link>https://dohq.github.io/tags/adventcalendar/</link>
+      <pubDate>Mon, 17 Dec 2018 10:23:00 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/tags/adventcalendar/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>vim</title>
+      <link>https://dohq.github.io/tags/vim/</link>
+      <pubDate>Mon, 17 Dec 2018 10:23:00 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>aws</title>
+      <link>https://dohq.github.io/tags/aws/</link>
+      <pubDate>Fri, 19 Jan 2018 14:29:46 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/tags/aws/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>ec2</title>
       <link>https://dohq.github.io/tags/ec2/</link>
       <pubDate>Fri, 19 Jan 2018 14:29:46 +0900</pubDate>
       <author>dorastone@gmail.com</author>
@@ -60,7 +87,43 @@
     </item>
     
     <item>
-      <title>Editors</title>
+      <title>ntp</title>
+      <link>https://dohq.github.io/tags/ntp/</link>
+      <pubDate>Fri, 19 Jan 2018 14:29:46 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/tags/ntp/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>python</title>
+      <link>https://dohq.github.io/tags/python/</link>
+      <pubDate>Wed, 10 Jan 2018 18:27:24 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>redshift</title>
+      <link>https://dohq.github.io/tags/redshift/</link>
+      <pubDate>Wed, 10 Jan 2018 18:27:24 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/tags/redshift/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>virtualbox</title>
+      <link>https://dohq.github.io/tags/virtualbox/</link>
+      <pubDate>Wed, 03 Jan 2018 03:08:22 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/tags/virtualbox/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>editors</title>
       <link>https://dohq.github.io/tags/editors/</link>
       <pubDate>Wed, 08 Nov 2017 11:50:07 +0900</pubDate>
       <author>dorastone@gmail.com</author>
@@ -69,11 +132,11 @@
     </item>
     
     <item>
-      <title>Linux</title>
-      <link>https://dohq.github.io/tags/linux/</link>
-      <pubDate>Fri, 25 Jan 2019 09:46:03 +0900</pubDate>
+      <title>vimconf</title>
+      <link>https://dohq.github.io/tags/vimconf/</link>
+      <pubDate>Wed, 08 Nov 2017 11:50:07 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/tags/linux/</guid>
+      <guid>https://dohq.github.io/tags/vimconf/</guid>
       <description></description>
     </item>
     
@@ -87,74 +150,11 @@
     </item>
     
     <item>
-      <title>Ntp</title>
-      <link>https://dohq.github.io/tags/ntp/</link>
-      <pubDate>Fri, 19 Jan 2018 14:29:46 +0900</pubDate>
+      <title>android</title>
+      <link>https://dohq.github.io/tags/android/</link>
+      <pubDate>Wed, 11 Jan 2017 02:09:46 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/tags/ntp/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Openstack</title>
-      <link>https://dohq.github.io/tags/openstack/</link>
-      <pubDate>Sat, 16 Feb 2019 00:42:31 +0900</pubDate>
-      <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/tags/openstack/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Python</title>
-      <link>https://dohq.github.io/tags/python/</link>
-      <pubDate>Wed, 10 Jan 2018 18:27:24 +0900</pubDate>
-      <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/tags/python/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Redshift</title>
-      <link>https://dohq.github.io/tags/redshift/</link>
-      <pubDate>Wed, 10 Jan 2018 18:27:24 +0900</pubDate>
-      <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/tags/redshift/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Ssh</title>
-      <link>https://dohq.github.io/tags/ssh/</link>
-      <pubDate>Fri, 25 Jan 2019 09:46:03 +0900</pubDate>
-      <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/tags/ssh/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vim</title>
-      <link>https://dohq.github.io/tags/vim/</link>
-      <pubDate>Mon, 17 Dec 2018 10:23:00 +0900</pubDate>
-      <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/tags/vim/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Vimconf</title>
-      <link>https://dohq.github.io/tags/vimconf/</link>
-      <pubDate>Wed, 08 Nov 2017 11:50:07 +0900</pubDate>
-      <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/tags/vimconf/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Virtualbox</title>
-      <link>https://dohq.github.io/tags/virtualbox/</link>
-      <pubDate>Wed, 03 Jan 2018 03:08:22 +0900</pubDate>
-      <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/tags/virtualbox/</guid>
+      <guid>https://dohq.github.io/tags/android/</guid>
       <description></description>
     </item>
     

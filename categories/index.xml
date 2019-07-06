@@ -9,25 +9,26 @@
     <managingEditor>dorastone@gmail.com</managingEditor>
     <webMaster>dorastone@gmail.com</webMaster>
     <copyright>2017 R.Maejima</copyright>
+    <lastBuildDate>Sat, 16 Feb 2019 00:42:31 +0900</lastBuildDate>
     
 	<atom:link href="https://dohq.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
-      <title>Impression</title>
-      <link>https://dohq.github.io/categories/impression/</link>
-      <pubDate>Wed, 08 Nov 2017 11:50:07 +0900</pubDate>
-      <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/categories/impression/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Tips</title>
+      <title>tips</title>
       <link>https://dohq.github.io/categories/tips/</link>
       <pubDate>Sat, 16 Feb 2019 00:42:31 +0900</pubDate>
       <author>dorastone@gmail.com</author>
       <guid>https://dohq.github.io/categories/tips/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>impression</title>
+      <link>https://dohq.github.io/categories/impression/</link>
+      <pubDate>Wed, 08 Nov 2017 11:50:07 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/categories/impression/</guid>
       <description></description>
     </item>
     
