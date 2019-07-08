@@ -4,25 +4,54 @@
   
   <url>
     <loc>https://dohq.github.io/categories/</loc>
-    <lastmod>2019-02-16T00:42:31+09:00</lastmod>
+    <lastmod>2019-07-07T00:51:39+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohq.github.io/posts/</loc>
+    <lastmod>2019-07-07T00:51:39+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohq.github.io/tags/</loc>
+    <lastmod>2019-07-07T00:51:39+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohq.github.io/tags/k3s/</loc>
+    <lastmod>2019-07-07T00:51:39+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohq.github.io/posts/k3s-on-time4vps-1/</loc>
+    <lastmod>2019-07-07T00:51:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dohq.github.io/categories/k8s/</loc>
+    <lastmod>2019-07-07T00:51:39+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohq.github.io/tags/k8s/</loc>
+    <lastmod>2019-07-07T00:51:39+09:00</lastmod>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohq.github.io/</loc>
+    <lastmod>2019-07-07T00:51:39+09:00</lastmod>
     <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dohq.github.io/posts/esxi-on-openstack-on-bosh/</loc>
     <lastmod>2019-02-16T00:42:31+09:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>https://dohq.github.io/posts/</loc>
-    <lastmod>2019-02-16T00:42:31+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dohq.github.io/tags/</loc>
-    <lastmod>2019-02-16T00:42:31+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -39,12 +68,6 @@
   
   <url>
     <loc>https://dohq.github.io/categories/tips/</loc>
-    <lastmod>2019-02-16T00:42:31+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dohq.github.io/</loc>
     <lastmod>2019-02-16T00:42:31+09:00</lastmod>
     <priority>0</priority>
   </url>

@@ -3,8 +3,8 @@
 <head>
   
   <meta charset="utf-8">
-  <title>やるだけやる</title>
-  <meta name="description" content="やるだけやる">
+  <title>k3s on Time4vps</title>
+  <meta name="description" content="k3s on Time4vps">
   <meta name="author" content="">
   
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -356,8 +356,6 @@ code, kbd, pre, samp {
 
   
   
-  <link href="https://dohq.github.io/index.xml" rel="alternate" type="application/rss+xml" title="やるだけやる Feed" />
-  
 
   <meta name="generator" content="Hugo 0.55.6" />
 
@@ -397,30 +395,20 @@ code, kbd, pre, samp {
 
 <div class="pure-g">
   <div class="pure-u-1-24 pure-u-md-5-24"></div>
-	<div class="pure-u-11-12 pure-u-md-7-12">
-	<div class="post-content">
-	
-	  <p class="posts-name">Recent posts:</p>
+  <div class="pure-u-11-12 pure-u-md-7-12">
+    <div class="post">
 
-	  <ul class="posts">
-		
-		
-		
-		<li>
-		  
-		  <a class="post-list" href="https://dohq.github.io/posts/k3s-on-time4vps-1/">k3s on Time4vps</a>
-
-      <p class="footnote">
-        <time datetime="2019-07-07 00:51:39 &#43;0900 &#43;0900">
-          
-            07-07-2019
-          
-        </time>
-
+      <div class="post-title">
+        <p class="footnote">
+          <time datetime="2019-07-07 00:51:39 &#43;0900 &#43;0900">
+            
+              07-07-2019
+            
+          </time>
+        
         
         |
         
-
         
         tags: [ <a href="https://dohq.github.io/tags/k8s">k8s</a> <a href="https://dohq.github.io/tags/k3s">k3s</a> ]
         
@@ -430,255 +418,294 @@ code, kbd, pre, samp {
         
 
         
+        </p>
+        <h1>k3s on Time4vps</h1>
+      </div>
 
-      </p>
-    </li>
-    
-    
-		
-		<li>
-		  
-		  <a class="post-list" href="https://dohq.github.io/posts/esxi-on-openstack-on-bosh/">ESXi on OpenStack on BOSHでの注意</a>
-
-      <p class="footnote">
-        <time datetime="2019-02-16 00:42:31 &#43;0900 &#43;0900">
-          
-            02-16-2019
-          
-        </time>
-
+      <div class="post-content">
         
-        |
         
 
-        
-        tags: [ <a href="https://dohq.github.io/tags/bosh">bosh</a> <a href="https://dohq.github.io/tags/openstack">openstack</a> ]
-        
+<h1 id="k8sクラスタ欲しい-欲しくない">k8sクラスタ欲しい…欲しくない？</h1>
 
-        
-        categories: [ <a href="https://dohq.github.io/categories/tips">tips</a> ]
-        
+<p>勉強の為にk8sのクラスタが欲しかった訳だが、<br />
+GKEとかKESはマスターがマネージドだからなーとか<br />
+AWSにデプロイとか重すぎてとか(主に費用的な意味で)<br />
+ツラいなーと思ってたところ、今年の頭くらいに<a href="http://k3s.io">k3s</a>が出てk8s動かすのに必要なリソースがググっと減った。</p>
 
-        
+<h2 id="k8s改めk3s-on-vps">k8s改めk3s on VPS</h2>
 
-      </p>
-    </li>
-    
-    
-		
-		<li>
-		  
-		  <a class="post-list" href="https://dohq.github.io/posts/ssh-tunnel-via-multiple-hops/">SSHポートフォワーディングを多段で行う</a>
+<p>最初は自宅の鯖に立てていたのだが、出先から(勉強会とか)で試しつつやろうとすると自宅のクソザコネットワーク(レオ○ット)では外からの接続がつらい。<br />
+面倒なのでVPSに立てようと思いつつ安いところを探してたら<a href="http://time4vps.com">time4vps</a>なるVPSサービスを見付けた。<br />
+これが安い。リージョンが日本では無い為、レスポンスはあまり良くないが</p>
 
-      <p class="footnote">
-        <time datetime="2019-01-25 09:46:03 &#43;0900 &#43;0900">
-          
-            01-25-2019
-          
-        </time>
+<pre><code>OS: Ubuntu 18.04 (64-bit)
+Processor: 2 x 2.6 GHz
+Memory: 8192 MB
+Hard disk: 80 GB
+Bandwidth: 1000 Mbps (Monthly limit: 8 TB)
+Fast SSD storage (1.00 EUR)
+1 Gbps port speed (1.00 EUR )
+</code></pre>
 
-        
-        |
-        
+<p>のスペックで月1500円くらい(2019-07-07現在)<br />
+今回はとりあえずお試しでSingle構成で構築<br />
+ただし最低1ヶ月からなので、時間単位で課金にしたい場合は<a href="http://scaleway.com">ScaleWay</a>が安そう。<br />
+ここまで書いといてなんだけどぶっちゃけVPSに関しては蛇足で本番はk3sのセットアップについて</p>
 
-        
-        tags: [ <a href="https://dohq.github.io/tags/linux">linux</a> <a href="https://dohq.github.io/tags/ssh">ssh</a> ]
-        
+<h2 id="セットアップ">セットアップ</h2>
 
-        
-        categories: [ <a href="https://dohq.github.io/categories/tips">tips</a> ]
-        
+<h3 id="k3sインストール">k3sインストール</h3>
 
-        
+<p>えっ、1コマンドでk8sのインストールを！？</p>
 
-      </p>
-    </li>
-    
-    
-		
-		<li>
-		  
-		  <a class="post-list" href="https://dohq.github.io/posts/vim-ac-20181217/">Vim AdventCalendar 17日目</a>
+<p>出来らぁっ！</p>
 
-      <p class="footnote">
-        <time datetime="2018-12-17 10:23:00 &#43;0900 &#43;0900">
-          
-            12-17-2018
-          
-        </time>
+<pre><code>curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC=&quot;--tls-san &lt;Public IP&gt;&quot; sh -&quot;
+</code></pre>
 
-        
-        |
-        
+<h3 id="セットアップ確認">セットアップ確認</h3>
 
-        
-        tags: [ <a href="https://dohq.github.io/tags/vim">vim</a> <a href="https://dohq.github.io/tags/adventcalendar">AdventCalendar</a> ]
-        
+<p>リモートホスト上で</p>
 
-        
-        categories: [ <a href="https://dohq.github.io/categories/tips">tips</a> ]
-        
+<pre><code>kubectl get nodes
+</code></pre>
 
-        
+<p>実行してSTATUSが <strong>Ready</strong> になってればOK<br />
+<code>/etc/rancher/k3s/k3s.yaml</code>の中身を<code>$HOME/.kube/config</code>に書いてアドレスを修正しとくと手元のPCからkubectlコマンドが打ててハッピー</p>
 
-      </p>
-    </li>
-    
-    
-		
-		<li>
-		  
-		  <a class="post-list" href="https://dohq.github.io/posts/set-ec2-ntp/">EC2でntpの設定が効かない</a>
+<h2 id="ダッシュボード追加">ダッシュボード追加</h2>
 
-      <p class="footnote">
-        <time datetime="2018-01-19 14:29:46 &#43;0900 &#43;0900">
-          
-            01-19-2018
-          
-        </time>
+<p>k3sはminikubeなんかと違ってインストールしたてだとdashboardが見れない。のでインストール</p>
 
-        
-        |
-        
+<pre><code>(*'-') &lt;  kubectl apply -f https://raw.githubusercontent.com/kubernetes/dashboard/v1.10.1/src/deploy/recommended/kubernetes-dashboard.yaml
 
-        
-        tags: [ <a href="https://dohq.github.io/tags/ec2">ec2</a> <a href="https://dohq.github.io/tags/aws">aws</a> <a href="https://dohq.github.io/tags/ntp">ntp</a> ]
-        
+secret/kubernetes-dashboard-certs created
+serviceaccount/kubernetes-dashboard created
+role.rbac.authorization.k8s.io/kubernetes-dashboard-minimal created
+rolebinding.rbac.authorization.k8s.io/kubernetes-dashboard-minimal created
+deployment.apps/kubernetes-dashboard created
+service/kubernetes-dashboard created
+</code></pre>
 
-        
-        categories: [ <a href="https://dohq.github.io/categories/tips">tips</a> ]
-        
+<p>でk8s上へのデプロイは完了だが、dashboard用adminユーザが必要な為これを作成する。</p>
 
-        
+<pre><code>(*'-') &lt; cat &lt;&lt;EOF &gt; dashboard-admin.yaml
+apiVersion: v1
+kind: ServiceAccount
+metadata:
+  name: admin-user
+  namespace: kube-system
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: admin-user
+roleRef:
+  apiGroup: rbac.authorization.k8s.io
+  kind: ClusterRole
+  name: cluster-admin
+subjects:
+- kind: ServiceAccount
+  name: admin-user
+  namespace: kube-system
+EOF
 
-      </p>
-    </li>
-    
-    
-		
-		<li>
-		  
-		  <a class="post-list" href="https://dohq.github.io/posts/write-huge-csv-for-py/">メモリに乗らない量のselect結果をcsvへ書き出す(python)</a>
+(*'-') &lt; kubectl apply -f dashboard-admin.yaml
+serviceaccount/admin-user created
+clusterrolebinding.rbac.authorization.k8s.io/admin-user created
 
-      <p class="footnote">
-        <time datetime="2018-01-10 18:27:24 &#43;0900 &#43;0900">
-          
-            01-10-2018
-          
-        </time>
+(*'-') &lt; kubectl -n kube-system describe secret $(kubectl -n kube-system get secret | grep admin-user | awk '{print $1}')
 
-        
-        |
-        
+(*'-') &lt; kubectl proxy
+</code></pre>
 
-        
-        tags: [ <a href="https://dohq.github.io/tags/python">python</a> <a href="https://dohq.github.io/tags/aws">aws</a> <a href="https://dohq.github.io/tags/redshift">redshift</a> ]
-        
+<p>最後のコマンドでズラズラっと出てきた<strong>token</strong>を使って<br />
+<a href="http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/">http://localhost:8001/api/v1/namespaces/kube-system/services/https:kubernetes-dashboard:/proxy/</a><br />
+にアクセスすればdashboardが見れる筈</p>
 
-        
-        categories: [ <a href="https://dohq.github.io/categories/tips">tips</a> ]
-        
+<h3 id="podデプロイテスト">podデプロイテスト</h3>
 
-        
+<p>適当なpod(replica-set)をデプロイする</p>
 
-      </p>
-    </li>
-    
-    
-		
-		<li>
-		  
-		  <a class="post-list" href="https://dohq.github.io/posts/move-virtualmachine-dir/">VirtualMachineディレクトリを移動する</a>
+<pre><code>(*'-') &lt; kubectl create namespace demo
+namespace/demo created
 
-      <p class="footnote">
-        <time datetime="2018-01-03 03:08:22 &#43;0900 &#43;0900">
-          
-            01-03-2018
-          
-        </time>
+(*'-') &lt; cat&lt;&lt;EOF &gt; demo.yaml
+apiVersion: extensions/v1beta1
+kind: Deployment
+metadata:
+  name: whoami-deployment
+  namespace: demo
+  labels:
+    system: demo
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: whoami
+  template:
+    metadata:
+      labels:
+        app: whoami
+    spec:
+      containers:
+        - name: whoami-container
+          image: containous/whoami
+          ports:
+          - containerPort: 80
+EOF
 
-        
-        |
-        
+(*'-') &lt; kubectl apply -f demo.yaml
+deployment.extensions/whoami-deployment created
 
-        
-        tags: [ <a href="https://dohq.github.io/tags/virtualbox">virtualbox</a> ]
-        
+(*'-') &lt; kubectl get pods -n demo
+NAME                                 READY   STATUS    RESTARTS   AGE
+whoami-deployment-8446fcc466-pwncz   1/1     Running   0          4m54s
+</code></pre>
 
-        
-        categories: [ <a href="https://dohq.github.io/categories/tips">tips</a> ]
-        
+<p>よさそう</p>
 
-        
+<h3 id="サービス動確">サービス動確</h3>
 
-      </p>
-    </li>
-    
-    
-		
-    
-		
-		<li>
-		  
-		  <a class="post-list" href="https://dohq.github.io/posts/vimconf2017/">Vimconf2017</a>
+<pre><code class="language-diff">(*'-') &lt; git diff demo.yaml
+diff --git a/demo.yaml b/demo.yaml
+index 0184f13..2c9884b 100644
+--- a/demo.yaml
++++ b/demo.yaml
+@@ -21,3 +21,22 @@ spec:
+           image: containous/whoami
+           ports:
+           - containerPort: 80
++
++---
++# Service
++apiVersion: v1
++kind: Service
++metadata:
++  name: whoami-services
++  namespace: demo
++  labels:
++    system: demo
++spec:
++  ports:
++    - name: http
++      targetPort: 80
++      port: 32324
++      protocol: TCP
++  selector:
++    app: whoami
++  type: LoadBalancer
+</code></pre>
 
-      <p class="footnote">
-        <time datetime="2017-11-08 11:50:07 &#43;0900 &#43;0900">
-          
-            11-08-2017
-          
-        </time>
+<pre><code>(*'-') &lt; kubectl apply -f demo.yaml
+deployment.extensions/whoami-deployment unchanged
+service/whoami-services configured
 
-        
-        |
-        
+(*'-') &lt; curl &lt;PUBLIC IP&gt;:32324
+Hostname: whoami-deployment-8446fcc466-k8bhz
+IP: 127.0.0.1
+IP: 10.42.0.13
+GET / HTTP/1.1
+Host: &lt;PUBLIC IP&gt;:32324
+User-Agent: curl/7.65.1
+Accept: */*
+</code></pre>
 
-        
-        tags: [ <a href="https://dohq.github.io/tags/vim">vim</a> <a href="https://dohq.github.io/tags/editors">editors</a> <a href="https://dohq.github.io/tags/vimconf">vimconf</a> ]
-        
+<p>いいのではないでしょうか</p>
 
-        
-        categories: [ <a href="https://dohq.github.io/categories/impression">impression</a> ]
-        
+<h3 id="kubectl-topしたい">kubectl topしたい</h3>
 
-        
+<p>初期状態だと</p>
 
-      </p>
-    </li>
-    
-    
-		
-		<li>
-		  
-		  <a class="post-list" href="https://dohq.github.io/posts/mokee/">ArchLinuxでMokeeをビルドする</a>
+<pre><code>(*'-') &lt; kubectl top node
+Error from server (NotFound): the server could not find the requested resource (get services http:heapster:)
 
-      <p class="footnote">
-        <time datetime="2017-01-11 02:09:46 &#43;0900 &#43;0900">
-          
-            01-11-2017
-          
-        </time>
+(*'-') &lt; kubectl top pods
+Error from server (NotFound): the server could not find the requested resource (get services http:heapster:)
+</code></pre>
 
-        
-        |
-        
+<p>どうやら<a href="https://github.com/kubernetes-incubator/metrics-server">metrics-server</a>のデプロイが必要らしい。<br />
+これ入れないとリソース使用率によるAutoScaleなどが出来ない。<br />
+README読むと</p>
 
-        
-        tags: [ <a href="https://dohq.github.io/tags/android">android</a> <a href="https://dohq.github.io/tags/mokee">Mokee</a> ]
-        
+<pre><code># Kubernetes 1.7
+$ kubectl create -f deploy/1.7/
 
-        
-        categories: [ <a href="https://dohq.github.io/categories/tips">tips</a> ]
-        
+# Kubernetes &gt; 1.8
+$ kubectl create -f deploy/1.8+/
+</code></pre>
 
-        
+<p>でいけそうなのだが微妙にいけない。 ログを見ると名前解決がアレっぽい。<br />
+調べてみると、以下のようにマニフェストにちょろっと追記してapplyするといいらしい</p>
 
-      </p>
-    </li>
-    
-    
-    </ul>
-  </div>
+<pre><code class="language-diff">diff --git a/deploy/1.8+/metrics-server-deployment.yaml b/deploy/1.8+/metrics-server-deployment.yaml
+index c2311b7..6231209 100644
+--- a/deploy/1.8+/metrics-server-deployment.yaml
++++ b/deploy/1.8+/metrics-server-deployment.yaml
+@@ -31,7 +31,10 @@ spec:
+       - name: metrics-server
+         image: k8s.gcr.io/metrics-server-amd64:v0.3.3
+         imagePullPolicy: Always
++        command:
++        - /metrics-server
++        - --kubelet-insecure-tls
++        - --kubelet-preferred-address-types=InternalDNS,InternalIP,ExternalDNS,ExternalIP,Hostname
+         volumeMounts:
+         - name: tmp-dir
+           mountPath: /tmp
+</code></pre>
+
+<p>(参考URL: <a href="https://qiita.com/chataro0/items/28f8744e2781f730a0e6">https://qiita.com/chataro0/items/28f8744e2781f730a0e6</a></p>
+
+<pre><code>(*'-') &lt; kubectl top node
+NAME                     CPU(cores)   CPU%   MEMORY(bytes)   MEMORY%
+&lt;Name&gt;                   53m          2%     518Mi           6%
+
+(*'-') &lt; kubectl top pods -n demo
+
+NAME                                 CPU(cores)   MEMORY(bytes)
+svclb-whoami-services-7phjn          0m           0Mi
+whoami-deployment-8446fcc466-k8bhz   0m           1Mi
+</code></pre>
+
+<p>いいね</p>
+
+<h3 id="ついでにhelmインストール">ついでにhelmインストール</h3>
+
+<pre><code>(*'-') &lt; kubectl -n kube-system create serviceaccount tiller
+serviceaccount/tiller created
+
+(*'-') &lt; kubectl create clusterrolebinding tiller --clusterrole cluster-admin --serviceaccount=kube-system:tiller
+clusterrolebinding.rbac.authorization.k8s.io/tiller created
+
+(*'-') &lt; helm init --service-account tiller
+$HELM_HOME has been configured at /home/dohq/.helm.
+
+Tiller (the Helm server-side component) has been installed into your Kubernetes Cluster.
+
+Please note: by default, Tiller is deployed with an insecure 'allow unauthenticated users' policy.
+To prevent this, run `helm init` with the --tiller-tls-verify flag.
+For more information on securing your installation see: https://docs.helm.sh/using_helm/#securing-your-helm-installation
+
+(*'-') &lt; kubectl get deployments -n kube-system
+
+NAME                   READY   UP-TO-DATE   AVAILABLE   AGE
+coredns                1/1     1            1           106m
+kubernetes-dashboard   1/1     1            1           89m
+metrics-server         1/1     1            1           8m59s
+tiller-deploy          1/1     1            1           3m26s ★
+traefik                1/1     1            1           105m
+</code></pre>
+
+<p>おk</p>
+
+<h2 id="後半へー続く">後半へー続く</h2>
+
+<p>疲れたので続きは次へ</p>
+
+      </div>
+    </div>
   </div>
   <div class="pure-u-1-24 pure-u-md-5-24"></div>
 </div>
@@ -713,8 +740,6 @@ code, kbd, pre, samp {
 
         </ul>
         <a href="#" class="pure-menu-link pull-right" id="gototop-btn">↑↑</a>
-        
-        <a href="https://dohq.github.io/index.xml" class="pure-menu-link pull-right">RSS</a>
         
       </div>
       

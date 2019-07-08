@@ -9,10 +9,33 @@
     <managingEditor>dorastone@gmail.com</managingEditor>
     <webMaster>dorastone@gmail.com</webMaster>
     <copyright>2017 R.Maejima</copyright>
-    <lastBuildDate>Sat, 16 Feb 2019 00:42:31 +0900</lastBuildDate>
+    <lastBuildDate>Sun, 07 Jul 2019 00:51:39 +0900</lastBuildDate>
     
 	<atom:link href="https://dohq.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>k3s on Time4vps</title>
+      <link>https://dohq.github.io/posts/k3s-on-time4vps-1/</link>
+      <pubDate>Sun, 07 Jul 2019 00:51:39 +0900</pubDate>
+      <author>dorastone@gmail.com</author>
+      <guid>https://dohq.github.io/posts/k3s-on-time4vps-1/</guid>
+      <description>k8sクラスタ欲しい…欲しくない？ 勉強の為にk8sのクラスタが欲しかった訳だが、
+GKEとかKESはマスターがマネージドだからなーとか
+AWSにデプロイとか重すぎてとか(主に費用的な意味で)
+ツラいなーと思ってたところ、今年の頭くらいにk3sが出てk8s動かすのに必要なリソースがググっと減った。
+k8s改めk3s on VPS 最初は自宅の鯖に立てていたのだが、出先から(勉強会とか)で試しつつやろうとすると自宅のクソザコネットワーク(レオ○ット)では外からの接続がつらい。
+面倒なのでVPSに立てようと思いつつ安いところを探してたらtime4vpsなるVPSサービスを見付けた。
+これが安い。リージョンが日本では無い為、レスポンスはあまり良くないが
+OS: Ubuntu 18.04 (64-bit) Processor: 2 x 2.6 GHz Memory: 8192 MB Hard disk: 80 GB Bandwidth: 1000 Mbps (Monthly limit: 8 TB) Fast SSD storage (1.00 EUR) 1 Gbps port speed (1.00 EUR )  のスペックで月1500円くらい(2019-07-07現在)
+今回はとりあえずお試しでSingle構成で構築
+ただし最低1ヶ月からなので、時間単位で課金にしたい場合はScaleWayが安そう。
+ここまで書いといてなんだけどぶっちゃけVPSに関しては蛇足で本番はk3sのセットアップについて
+セットアップ k3sインストール えっ、1コマンドでk8sのインストールを！？
+出来らぁっ！
+curl -sfL https://get.k3s.io | INSTALL_K3S_EXEC=&amp;quot;--tls-san &amp;lt;Public IP&amp;gt;&amp;quot; sh -&amp;quot;  セットアップ確認 リモートホスト上で
+kubectl get nodes  実行してSTATUSが Ready になってればOK</description>
+    </item>
     
     <item>
       <title>ESXi on OpenStack on BOSHでの注意</title>
