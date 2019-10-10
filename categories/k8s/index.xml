@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>k8s on やるだけやる</title>
-    <link>https://dohq.github.io/categories/k8s/</link>
+    <link>https://blog.dohq.dev/categories/k8s/</link>
     <description>Recent content in k8s on やるだけやる</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,15 +11,15 @@
     <copyright>2017 R.Maejima</copyright>
     <lastBuildDate>Sun, 07 Jul 2019 00:51:39 +0900</lastBuildDate>
     
-	<atom:link href="https://dohq.github.io/categories/k8s/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.dohq.dev/categories/k8s/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>k3s on Time4vps</title>
-      <link>https://dohq.github.io/posts/k3s-on-time4vps-1/</link>
+      <link>https://blog.dohq.dev/posts/k3s-on-time4vps-1/</link>
       <pubDate>Sun, 07 Jul 2019 00:51:39 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/k3s-on-time4vps-1/</guid>
+      <guid>https://blog.dohq.dev/posts/k3s-on-time4vps-1/</guid>
       <description>k8sクラスタ欲しい…欲しくない？ 勉強の為にk8sのクラスタが欲しかった訳だが、
 GKEとかKESはマスターがマネージドだからなーとか
 AWSにデプロイとか重すぎてとか(主に費用的な意味で)

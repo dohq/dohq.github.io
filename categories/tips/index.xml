@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>tips on やるだけやる</title>
-    <link>https://dohq.github.io/categories/tips/</link>
+    <link>https://blog.dohq.dev/categories/tips/</link>
     <description>Recent content in tips on やるだけやる</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,15 +11,15 @@
     <copyright>2017 R.Maejima</copyright>
     <lastBuildDate>Sat, 16 Feb 2019 00:42:31 +0900</lastBuildDate>
     
-	<atom:link href="https://dohq.github.io/categories/tips/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.dohq.dev/categories/tips/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ESXi on OpenStack on BOSHでの注意</title>
-      <link>https://dohq.github.io/posts/esxi-on-openstack-on-bosh/</link>
+      <link>https://blog.dohq.dev/posts/esxi-on-openstack-on-bosh/</link>
       <pubDate>Sat, 16 Feb 2019 00:42:31 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/esxi-on-openstack-on-bosh/</guid>
+      <guid>https://blog.dohq.dev/posts/esxi-on-openstack-on-bosh/</guid>
       <description>OpenStackのインストールからは書ける気がしないので割愛
 主に設定についての部分だけ抜粋
 ちなみにOpenStackはESXi上にMirantis OpenStackで
@@ -44,20 +44,20 @@ OpenStack上のVolume削除が鬼のように(ry やっとこさ作ったBOSH環
     
     <item>
       <title>SSHポートフォワーディングを多段で行う</title>
-      <link>https://dohq.github.io/posts/ssh-tunnel-via-multiple-hops/</link>
+      <link>https://blog.dohq.dev/posts/ssh-tunnel-via-multiple-hops/</link>
       <pubDate>Fri, 25 Jan 2019 09:46:03 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/ssh-tunnel-via-multiple-hops/</guid>
+      <guid>https://blog.dohq.dev/posts/ssh-tunnel-via-multiple-hops/</guid>
       <description>なんで 外出先から自宅にあるESXiのWEB管理画面が見たいとか…ニッチすぎるか
 図 ┌────────┐ ┌──────┐ ┌──────┐ ┌──────────┐ │手元のPC│ │踏み台│ │自宅PC│ │自宅サーバ│ └───┬────┘ └──┬───┘ └──┬───┘ └────┬─────┘ │ ポート8080(なんでもいい)│ │ │ │ ────────────────────────&amp;gt; │ │ │ │ │ │ │ │ ポート44444(なんでもいい)│ │ │ │ ─────────────────────────&amp;gt; │ │ │ │ │ │ │ │ ポート443 │ │ │ │ ──────────────────&amp;gt; ┌───┴────┐ ┌──┴───┐ ┌──┴───┐ ┌────┴─────┐ │手元のPC│ │踏み台│ │自宅PC│ │自宅サーバ│ └────────┘ └──────┘ └──────┘ └──────────┘  結論 基本的には普通のポートフォワードコマンドに則る 例として 手元のPC: localhost 踏み台: bastion 自宅PC: home 自宅サーバ: server で繋げられるものとする</description>
     </item>
     
     <item>
       <title>Vim AdventCalendar 17日目</title>
-      <link>https://dohq.github.io/posts/vim-ac-20181217/</link>
+      <link>https://blog.dohq.dev/posts/vim-ac-20181217/</link>
       <pubDate>Mon, 17 Dec 2018 10:23:00 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/vim-ac-20181217/</guid>
+      <guid>https://blog.dohq.dev/posts/vim-ac-20181217/</guid>
       <description>今回のVimconf2018でなんの成果も得られませませんでした！
 訳: Vimconf2018行けなかった…
 WindowsでVimのビルドしてみようか！ 本当はVimconfの感想記事とか書こうと思ったのですがなんの成果も得られなかった為急遽別ネタを書きます。
@@ -77,10 +77,10 @@ git clone https://github.com/vim/vim D:\build-vim\vim
     
     <item>
       <title>EC2でntpの設定が効かない</title>
-      <link>https://dohq.github.io/posts/set-ec2-ntp/</link>
+      <link>https://blog.dohq.dev/posts/set-ec2-ntp/</link>
       <pubDate>Fri, 19 Jan 2018 14:29:46 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/set-ec2-ntp/</guid>
+      <guid>https://blog.dohq.dev/posts/set-ec2-ntp/</guid>
       <description>EC2上のLinux(Centos5)でntp時刻同期が出来ない 現行のサービスにて、EC2上でCentOS5のシステムがあります。
 ところが最近このマシンの時刻が早まってきてまして、いろいろと不都合が…
 ntpサービスの導入をしていなかった事から
@@ -95,10 +95,10 @@ echo &#39;1&#39; &amp;gt; /proc/sys/xen/independent_wallclock  これで、ntpda
     
     <item>
       <title>メモリに乗らない量のselect結果をcsvへ書き出す(python)</title>
-      <link>https://dohq.github.io/posts/write-huge-csv-for-py/</link>
+      <link>https://blog.dohq.dev/posts/write-huge-csv-for-py/</link>
       <pubDate>Wed, 10 Jan 2018 18:27:24 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/write-huge-csv-for-py/</guid>
+      <guid>https://blog.dohq.dev/posts/write-huge-csv-for-py/</guid>
       <description>数百GBデータでもcsvに書き出したい！ 業務用のツールを作成する際、 DBのselect結果をcsvへ書き出したい
 という要望は結構あるかと思います。
 でもって適当にcur作ってfetchallしてcsv.writerってやるんですがselect結果がうん千万件とかになるとfetchallした瞬間にメモリを食い潰していきます。
@@ -114,10 +114,10 @@ def write_sql_result(sql f): with get_connection() as conn: with conn.cursor(&#3
     
     <item>
       <title>VirtualMachineディレクトリを移動する</title>
-      <link>https://dohq.github.io/posts/move-virtualmachine-dir/</link>
+      <link>https://blog.dohq.dev/posts/move-virtualmachine-dir/</link>
       <pubDate>Wed, 03 Jan 2018 03:08:22 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/move-virtualmachine-dir/</guid>
+      <guid>https://blog.dohq.dev/posts/move-virtualmachine-dir/</guid>
       <description>既存仮想マシンがある状態でVirtualMachineディレクトリを移動したい VirtualMachineディレクトリを移動してvirtualboxからaddしようとすると
 Failed to open virtual machine located in /mnt/ssd/VirtualMachine/Windows7/Windows7.vbox. Cannot register the hard disk &#39;&amp;lt;新VDIパス&amp;gt;&#39; {UUID} because a hard disk &#39;&amp;lt;旧VDIパス&amp;gt;&#39; with UUID {UUID} already exists. Result Code: NS_ERROR_INVALID_ARG (0x80070057) Component: VirtualBoxWrap Interface: IVirtualBox {9570b9d5-f1a1-448a-10c5-e12f5285adad}  って言われてつらかった。
 自分ではこれで上手くいったって手順なのであしからず
@@ -129,10 +129,10 @@ vboxファイルの HardDisk セクションに上記UUIDで置換
     
     <item>
       <title>ArchLinuxでMokeeをビルドする</title>
-      <link>https://dohq.github.io/posts/mokee/</link>
+      <link>https://blog.dohq.dev/posts/mokee/</link>
       <pubDate>Wed, 11 Jan 2017 02:09:46 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/mokee/</guid>
+      <guid>https://blog.dohq.dev/posts/mokee/</guid>
       <description>自分メモ Mokee(MM)のビルド Xiaomi Mi5(gemini)のMokeeをビルドしたのでそのメモ 尚、対象デバイスはgemini(Xiaomi Mi5)とする。
 開発ツール系はインストールしてあるよね？
 環境 OS: Arch Linux Kernel: x86_64 Linux 4.8.13-1-ARCH Uptime: 4d 23h 59m Packages: 836 Shell: zsh 5.3.1 CPU: Intel Core i5-2520M CPU @ 3.2GHz RAM: 7292MiB / 15934MiB  以下雑なコマンド yaourt -S repo imagemagick mkdir ~/Mokee &amp;amp;&amp;amp; cd $_ virtualenv2 venv repo init -u https://github.com/MoKee/android.git -b mkm repo sync -j16 . build/envsetup.sh . venv/bin/activate breakfast gemini mka bacon  その他メモ selinux permissiveのkernelを作る</description>

@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>AdventCalendar on やるだけやる</title>
-    <link>https://dohq.github.io/tags/adventcalendar/</link>
+    <link>https://blog.dohq.dev/tags/adventcalendar/</link>
     <description>Recent content in AdventCalendar on やるだけやる</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,15 +11,15 @@
     <copyright>2017 R.Maejima</copyright>
     <lastBuildDate>Mon, 17 Dec 2018 10:23:00 +0900</lastBuildDate>
     
-	<atom:link href="https://dohq.github.io/tags/adventcalendar/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.dohq.dev/tags/adventcalendar/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Vim AdventCalendar 17日目</title>
-      <link>https://dohq.github.io/posts/vim-ac-20181217/</link>
+      <link>https://blog.dohq.dev/posts/vim-ac-20181217/</link>
       <pubDate>Mon, 17 Dec 2018 10:23:00 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/vim-ac-20181217/</guid>
+      <guid>https://blog.dohq.dev/posts/vim-ac-20181217/</guid>
       <description>今回のVimconf2018でなんの成果も得られませませんでした！
 訳: Vimconf2018行けなかった…
 WindowsでVimのビルドしてみようか！ 本当はVimconfの感想記事とか書こうと思ったのですがなんの成果も得られなかった為急遽別ネタを書きます。

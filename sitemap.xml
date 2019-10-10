@@ -3,177 +3,177 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://dohq.github.io/categories/</loc>
+    <loc>https://blog.dohq.dev/categories/</loc>
     <lastmod>2019-07-07T00:51:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/k3s/</loc>
+    <loc>https://blog.dohq.dev/tags/k3s/</loc>
     <lastmod>2019-07-07T00:51:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/posts/k3s-on-time4vps-1/</loc>
+    <loc>https://blog.dohq.dev/posts/k3s-on-time4vps-1/</loc>
     <lastmod>2019-07-07T00:51:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/k8s/</loc>
+    <loc>https://blog.dohq.dev/categories/k8s/</loc>
     <lastmod>2019-07-07T00:51:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/categories/k8s/</loc>
+    <loc>https://blog.dohq.dev/tags/k8s/</loc>
     <lastmod>2019-07-07T00:51:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/posts/</loc>
+    <loc>https://blog.dohq.dev/posts/</loc>
     <lastmod>2019-07-07T00:51:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/</loc>
+    <loc>https://blog.dohq.dev/tags/</loc>
     <lastmod>2019-07-07T00:51:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/</loc>
+    <loc>https://blog.dohq.dev/</loc>
     <lastmod>2019-07-07T00:51:39+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/bosh/</loc>
+    <loc>https://blog.dohq.dev/tags/bosh/</loc>
     <lastmod>2019-02-16T00:42:31+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/posts/esxi-on-openstack-on-bosh/</loc>
+    <loc>https://blog.dohq.dev/posts/esxi-on-openstack-on-bosh/</loc>
     <lastmod>2019-02-16T00:42:31+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/openstack/</loc>
+    <loc>https://blog.dohq.dev/tags/openstack/</loc>
     <lastmod>2019-02-16T00:42:31+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/categories/tips/</loc>
+    <loc>https://blog.dohq.dev/categories/tips/</loc>
     <lastmod>2019-02-16T00:42:31+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/linux/</loc>
+    <loc>https://blog.dohq.dev/tags/linux/</loc>
     <lastmod>2019-01-25T09:46:03+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/ssh/</loc>
+    <loc>https://blog.dohq.dev/tags/ssh/</loc>
     <lastmod>2019-01-25T09:46:03+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/posts/ssh-tunnel-via-multiple-hops/</loc>
+    <loc>https://blog.dohq.dev/posts/ssh-tunnel-via-multiple-hops/</loc>
     <lastmod>2019-01-25T09:46:03+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/adventcalendar/</loc>
+    <loc>https://blog.dohq.dev/tags/adventcalendar/</loc>
     <lastmod>2018-12-17T10:23:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/vim/</loc>
+    <loc>https://blog.dohq.dev/tags/vim/</loc>
     <lastmod>2018-12-17T10:23:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/posts/vim-ac-20181217/</loc>
+    <loc>https://blog.dohq.dev/posts/vim-ac-20181217/</loc>
     <lastmod>2018-12-17T10:23:00+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/aws/</loc>
+    <loc>https://blog.dohq.dev/tags/aws/</loc>
     <lastmod>2018-01-19T14:29:46+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/ec2/</loc>
+    <loc>https://blog.dohq.dev/tags/ec2/</loc>
     <lastmod>2018-01-19T14:29:46+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/posts/set-ec2-ntp/</loc>
+    <loc>https://blog.dohq.dev/posts/set-ec2-ntp/</loc>
     <lastmod>2018-01-19T14:29:46+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/ntp/</loc>
+    <loc>https://blog.dohq.dev/tags/ntp/</loc>
     <lastmod>2018-01-19T14:29:46+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/python/</loc>
+    <loc>https://blog.dohq.dev/tags/python/</loc>
     <lastmod>2018-01-10T18:27:24+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/redshift/</loc>
+    <loc>https://blog.dohq.dev/tags/redshift/</loc>
     <lastmod>2018-01-10T18:27:24+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/posts/write-huge-csv-for-py/</loc>
+    <loc>https://blog.dohq.dev/posts/write-huge-csv-for-py/</loc>
     <lastmod>2018-01-10T18:27:24+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/virtualbox/</loc>
+    <loc>https://blog.dohq.dev/tags/virtualbox/</loc>
     <lastmod>2018-01-03T03:08:22+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/posts/move-virtualmachine-dir/</loc>
+    <loc>https://blog.dohq.dev/posts/move-virtualmachine-dir/</loc>
     <lastmod>2018-01-03T03:08:22+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/about/</loc>
+    <loc>https://blog.dohq.dev/about/</loc>
     <lastmod>2017-11-12T18:23:58+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/editors/</loc>
+    <loc>https://blog.dohq.dev/tags/editors/</loc>
     <lastmod>2017-11-08T11:50:07+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/categories/impression/</loc>
+    <loc>https://blog.dohq.dev/categories/impression/</loc>
     <lastmod>2017-11-08T11:50:07+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/vimconf/</loc>
+    <loc>https://blog.dohq.dev/tags/vimconf/</loc>
     <lastmod>2017-11-08T11:50:07+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/posts/vimconf2017/</loc>
+    <loc>https://blog.dohq.dev/posts/vimconf2017/</loc>
     <lastmod>2017-11-08T11:50:07+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/android/</loc>
+    <loc>https://blog.dohq.dev/tags/android/</loc>
     <lastmod>2017-01-11T02:09:46+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/posts/mokee/</loc>
+    <loc>https://blog.dohq.dev/posts/mokee/</loc>
     <lastmod>2017-01-11T02:09:46+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/mokee/</loc>
+    <loc>https://blog.dohq.dev/tags/mokee/</loc>
     <lastmod>2017-01-11T02:09:46+09:00</lastmod>
   </url>
   

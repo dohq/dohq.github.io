@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>vimconf on やるだけやる</title>
-    <link>https://dohq.github.io/tags/vimconf/</link>
+    <link>https://blog.dohq.dev/tags/vimconf/</link>
     <description>Recent content in vimconf on やるだけやる</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,15 +11,15 @@
     <copyright>2017 R.Maejima</copyright>
     <lastBuildDate>Wed, 08 Nov 2017 11:50:07 +0900</lastBuildDate>
     
-	<atom:link href="https://dohq.github.io/tags/vimconf/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.dohq.dev/tags/vimconf/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Vimconf2017</title>
-      <link>https://dohq.github.io/posts/vimconf2017/</link>
+      <link>https://blog.dohq.dev/posts/vimconf2017/</link>
       <pubDate>Wed, 08 Nov 2017 11:50:07 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/vimconf2017/</guid>
+      <guid>https://blog.dohq.dev/posts/vimconf2017/</guid>
       <description>何勘違いしてるんだ?まだ俺のvimconf2017は終了してないぜ 周回遅れにも程がありますが2017年11月4日に開催されたvimconf2017に参加しましたので、
 その感想をば
 GoZen Vim, Me and Community (haya14busa) incsearch.vim/vim-easymotionなどのauthorです。

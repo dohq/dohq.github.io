@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>python on やるだけやる</title>
-    <link>https://dohq.github.io/tags/python/</link>
+    <link>https://blog.dohq.dev/tags/python/</link>
     <description>Recent content in python on やるだけやる</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,15 +11,15 @@
     <copyright>2017 R.Maejima</copyright>
     <lastBuildDate>Wed, 10 Jan 2018 18:27:24 +0900</lastBuildDate>
     
-	<atom:link href="https://dohq.github.io/tags/python/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.dohq.dev/tags/python/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>メモリに乗らない量のselect結果をcsvへ書き出す(python)</title>
-      <link>https://dohq.github.io/posts/write-huge-csv-for-py/</link>
+      <link>https://blog.dohq.dev/posts/write-huge-csv-for-py/</link>
       <pubDate>Wed, 10 Jan 2018 18:27:24 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/write-huge-csv-for-py/</guid>
+      <guid>https://blog.dohq.dev/posts/write-huge-csv-for-py/</guid>
       <description>数百GBデータでもcsvに書き出したい！ 業務用のツールを作成する際、 DBのselect結果をcsvへ書き出したい
 という要望は結構あるかと思います。
 でもって適当にcur作ってfetchallしてcsv.writerってやるんですがselect結果がうん千万件とかになるとfetchallした瞬間にメモリを食い潰していきます。

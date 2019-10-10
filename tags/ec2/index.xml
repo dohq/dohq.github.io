@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ec2 on やるだけやる</title>
-    <link>https://dohq.github.io/tags/ec2/</link>
+    <link>https://blog.dohq.dev/tags/ec2/</link>
     <description>Recent content in ec2 on やるだけやる</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,15 +11,15 @@
     <copyright>2017 R.Maejima</copyright>
     <lastBuildDate>Fri, 19 Jan 2018 14:29:46 +0900</lastBuildDate>
     
-	<atom:link href="https://dohq.github.io/tags/ec2/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.dohq.dev/tags/ec2/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>EC2でntpの設定が効かない</title>
-      <link>https://dohq.github.io/posts/set-ec2-ntp/</link>
+      <link>https://blog.dohq.dev/posts/set-ec2-ntp/</link>
       <pubDate>Fri, 19 Jan 2018 14:29:46 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/set-ec2-ntp/</guid>
+      <guid>https://blog.dohq.dev/posts/set-ec2-ntp/</guid>
       <description>EC2上のLinux(Centos5)でntp時刻同期が出来ない 現行のサービスにて、EC2上でCentOS5のシステムがあります。
 ところが最近このマシンの時刻が早まってきてまして、いろいろと不都合が…
 ntpサービスの導入をしていなかった事から

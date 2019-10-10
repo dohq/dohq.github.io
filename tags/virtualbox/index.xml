@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>virtualbox on やるだけやる</title>
-    <link>https://dohq.github.io/tags/virtualbox/</link>
+    <link>https://blog.dohq.dev/tags/virtualbox/</link>
     <description>Recent content in virtualbox on やるだけやる</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,15 +11,15 @@
     <copyright>2017 R.Maejima</copyright>
     <lastBuildDate>Wed, 03 Jan 2018 03:08:22 +0900</lastBuildDate>
     
-	<atom:link href="https://dohq.github.io/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.dohq.dev/tags/virtualbox/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>VirtualMachineディレクトリを移動する</title>
-      <link>https://dohq.github.io/posts/move-virtualmachine-dir/</link>
+      <link>https://blog.dohq.dev/posts/move-virtualmachine-dir/</link>
       <pubDate>Wed, 03 Jan 2018 03:08:22 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/move-virtualmachine-dir/</guid>
+      <guid>https://blog.dohq.dev/posts/move-virtualmachine-dir/</guid>
       <description>既存仮想マシンがある状態でVirtualMachineディレクトリを移動したい VirtualMachineディレクトリを移動してvirtualboxからaddしようとすると
 Failed to open virtual machine located in /mnt/ssd/VirtualMachine/Windows7/Windows7.vbox. Cannot register the hard disk &#39;&amp;lt;新VDIパス&amp;gt;&#39; {UUID} because a hard disk &#39;&amp;lt;旧VDIパス&amp;gt;&#39; with UUID {UUID} already exists. Result Code: NS_ERROR_INVALID_ARG (0x80070057) Component: VirtualBoxWrap Interface: IVirtualBox {9570b9d5-f1a1-448a-10c5-e12f5285adad}  って言われてつらかった。
 自分ではこれで上手くいったって手順なのであしからず

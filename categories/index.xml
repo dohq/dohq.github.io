@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on やるだけやる</title>
-    <link>https://dohq.github.io/categories/</link>
+    <link>https://blog.dohq.dev/categories/</link>
     <description>Recent content in Categories on やるだけやる</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,33 +11,33 @@
     <copyright>2017 R.Maejima</copyright>
     <lastBuildDate>Sun, 07 Jul 2019 00:51:39 +0900</lastBuildDate>
     
-	<atom:link href="https://dohq.github.io/categories/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.dohq.dev/categories/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>k8s</title>
-      <link>https://dohq.github.io/categories/k8s/</link>
+      <link>https://blog.dohq.dev/categories/k8s/</link>
       <pubDate>Sun, 07 Jul 2019 00:51:39 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/categories/k8s/</guid>
+      <guid>https://blog.dohq.dev/categories/k8s/</guid>
       <description></description>
     </item>
     
     <item>
       <title>tips</title>
-      <link>https://dohq.github.io/categories/tips/</link>
+      <link>https://blog.dohq.dev/categories/tips/</link>
       <pubDate>Sat, 16 Feb 2019 00:42:31 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/categories/tips/</guid>
+      <guid>https://blog.dohq.dev/categories/tips/</guid>
       <description></description>
     </item>
     
     <item>
       <title>impression</title>
-      <link>https://dohq.github.io/categories/impression/</link>
+      <link>https://blog.dohq.dev/categories/impression/</link>
       <pubDate>Wed, 08 Nov 2017 11:50:07 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/categories/impression/</guid>
+      <guid>https://blog.dohq.dev/categories/impression/</guid>
       <description></description>
     </item>
     

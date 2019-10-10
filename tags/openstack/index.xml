@@ -2,7 +2,7 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>openstack on やるだけやる</title>
-    <link>https://dohq.github.io/tags/openstack/</link>
+    <link>https://blog.dohq.dev/tags/openstack/</link>
     <description>Recent content in openstack on やるだけやる</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
@@ -11,15 +11,15 @@
     <copyright>2017 R.Maejima</copyright>
     <lastBuildDate>Sat, 16 Feb 2019 00:42:31 +0900</lastBuildDate>
     
-	<atom:link href="https://dohq.github.io/tags/openstack/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://blog.dohq.dev/tags/openstack/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>ESXi on OpenStack on BOSHでの注意</title>
-      <link>https://dohq.github.io/posts/esxi-on-openstack-on-bosh/</link>
+      <link>https://blog.dohq.dev/posts/esxi-on-openstack-on-bosh/</link>
       <pubDate>Sat, 16 Feb 2019 00:42:31 +0900</pubDate>
       <author>dorastone@gmail.com</author>
-      <guid>https://dohq.github.io/posts/esxi-on-openstack-on-bosh/</guid>
+      <guid>https://blog.dohq.dev/posts/esxi-on-openstack-on-bosh/</guid>
       <description>OpenStackのインストールからは書ける気がしないので割愛
 主に設定についての部分だけ抜粋
 ちなみにOpenStackはESXi上にMirantis OpenStackで
