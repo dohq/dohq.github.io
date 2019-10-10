@@ -5,25 +5,11 @@
   <url>
     <loc>https://dohq.github.io/categories/</loc>
     <lastmod>2019-07-07T00:51:39+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dohq.github.io/posts/</loc>
-    <lastmod>2019-07-07T00:51:39+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dohq.github.io/tags/</loc>
-    <lastmod>2019-07-07T00:51:39+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dohq.github.io/tags/k3s/</loc>
     <lastmod>2019-07-07T00:51:39+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -32,21 +18,33 @@
   </url>
   
   <url>
-    <loc>https://dohq.github.io/categories/k8s/</loc>
+    <loc>https://dohq.github.io/tags/k8s/</loc>
     <lastmod>2019-07-07T00:51:39+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/k8s/</loc>
+    <loc>https://dohq.github.io/categories/k8s/</loc>
     <lastmod>2019-07-07T00:51:39+09:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohq.github.io/posts/</loc>
+    <lastmod>2019-07-07T00:51:39+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dohq.github.io/tags/</loc>
+    <lastmod>2019-07-07T00:51:39+09:00</lastmod>
   </url>
   
   <url>
     <loc>https://dohq.github.io/</loc>
     <lastmod>2019-07-07T00:51:39+09:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohq.github.io/tags/bosh/</loc>
+    <lastmod>2019-02-16T00:42:31+09:00</lastmod>
   </url>
   
   <url>
@@ -55,21 +53,23 @@
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/bosh/</loc>
-    <lastmod>2019-02-16T00:42:31+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://dohq.github.io/tags/openstack/</loc>
     <lastmod>2019-02-16T00:42:31+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dohq.github.io/categories/tips/</loc>
     <lastmod>2019-02-16T00:42:31+09:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohq.github.io/tags/linux/</loc>
+    <lastmod>2019-01-25T09:46:03+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dohq.github.io/tags/ssh/</loc>
+    <lastmod>2019-01-25T09:46:03+09:00</lastmod>
   </url>
   
   <url>
@@ -78,21 +78,13 @@
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/linux/</loc>
-    <lastmod>2019-01-25T09:46:03+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dohq.github.io/tags/ssh/</loc>
-    <lastmod>2019-01-25T09:46:03+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://dohq.github.io/tags/adventcalendar/</loc>
     <lastmod>2018-12-17T10:23:00+09:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohq.github.io/tags/vim/</loc>
+    <lastmod>2018-12-17T10:23:00+09:00</lastmod>
   </url>
   
   <url>
@@ -101,9 +93,13 @@
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/vim/</loc>
-    <lastmod>2018-12-17T10:23:00+09:00</lastmod>
-    <priority>0</priority>
+    <loc>https://dohq.github.io/tags/aws/</loc>
+    <lastmod>2018-01-19T14:29:46+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dohq.github.io/tags/ec2/</loc>
+    <lastmod>2018-01-19T14:29:46+09:00</lastmod>
   </url>
   
   <url>
@@ -112,33 +108,18 @@
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/aws/</loc>
-    <lastmod>2018-01-19T14:29:46+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dohq.github.io/tags/ec2/</loc>
-    <lastmod>2018-01-19T14:29:46+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
     <loc>https://dohq.github.io/tags/ntp/</loc>
     <lastmod>2018-01-19T14:29:46+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dohq.github.io/tags/python/</loc>
     <lastmod>2018-01-10T18:27:24+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dohq.github.io/tags/redshift/</loc>
     <lastmod>2018-01-10T18:27:24+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -147,14 +128,13 @@
   </url>
   
   <url>
-    <loc>https://dohq.github.io/posts/move-virtualmachine-dir/</loc>
+    <loc>https://dohq.github.io/tags/virtualbox/</loc>
     <lastmod>2018-01-03T03:08:22+09:00</lastmod>
   </url>
   
   <url>
-    <loc>https://dohq.github.io/tags/virtualbox/</loc>
+    <loc>https://dohq.github.io/posts/move-virtualmachine-dir/</loc>
     <lastmod>2018-01-03T03:08:22+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -163,26 +143,28 @@
   </url>
   
   <url>
-    <loc>https://dohq.github.io/posts/vimconf2017/</loc>
-    <lastmod>2017-11-08T11:50:07+09:00</lastmod>
-  </url>
-  
-  <url>
     <loc>https://dohq.github.io/tags/editors/</loc>
     <lastmod>2017-11-08T11:50:07+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dohq.github.io/categories/impression/</loc>
     <lastmod>2017-11-08T11:50:07+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
   <url>
     <loc>https://dohq.github.io/tags/vimconf/</loc>
     <lastmod>2017-11-08T11:50:07+09:00</lastmod>
-    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://dohq.github.io/posts/vimconf2017/</loc>
+    <lastmod>2017-11-08T11:50:07+09:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://dohq.github.io/tags/android/</loc>
+    <lastmod>2017-01-11T02:09:46+09:00</lastmod>
   </url>
   
   <url>
@@ -193,13 +175,6 @@
   <url>
     <loc>https://dohq.github.io/tags/mokee/</loc>
     <lastmod>2017-01-11T02:09:46+09:00</lastmod>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://dohq.github.io/tags/android/</loc>
-    <lastmod>2017-01-11T02:09:46+09:00</lastmod>
-    <priority>0</priority>
   </url>
   
 </urlset>
